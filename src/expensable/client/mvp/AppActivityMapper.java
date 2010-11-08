@@ -8,7 +8,7 @@ import expensable.client.ClientFactory;
 import expensable.client.activity.dashboard.ShowDashboardActivity;
 import expensable.client.activity.report.ShowExpenseReportActivity;
 import expensable.client.place.DashboardPlace;
-import expensable.client.place.ExpenseReportPlace;
+import expensable.client.place.ExpenseReportsPlace;
 
 public class AppActivityMapper implements ActivityMapper {
 
@@ -30,8 +30,8 @@ public class AppActivityMapper implements ActivityMapper {
     // TODO(dpurpura): change this to use gin
     if (place instanceof DashboardPlace) {
       return new ShowDashboardActivity((DashboardPlace) place, clientFactory);
-    } else if (place instanceof ExpenseReportPlace) {
-      return new ShowExpenseReportActivity((ExpenseReportPlace) place, clientFactory);
+    } else if (place instanceof ExpenseReportsPlace) {
+      return new ShowExpenseReportActivity((ExpenseReportsPlace) place, clientFactory);
     } else {
       return null;
     }

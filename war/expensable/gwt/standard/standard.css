@@ -1,5 +1,6 @@
 /**
- * The file contains styles for GWT widgets in the standard theme.
+ * The file contains styles for GWT widgets in the GWT standard theme
+ * with changes for ExpensAble
  *
  * In order to maintain cross-browser compatibility, the following syntax is
  * used to create IE6 specific style rules:
@@ -12,20 +13,24 @@
  *    }
  */
 
-body, table td, select {
+body, table td {
   font-family: Arial Unicode MS, Arial, sans-serif;
-  font-size: small;
+  font-size: 84%;
+}
+input, button, select {
+  font-family: Arial Unicode MS, Arial, sans-serif;
+  font-size: 100%;
 }
 pre {
   font-family: "courier new", courier;
-  font-size: small;
+  font-size: 84%;
 }
 body {
   color: black;
   margin: 0px;
   border: 0px;
   padding: 0px;
-  background: #fff;
+  background: #C0C0C0;
   direction: ltr;
 }
 a, a:visited, a:hover {

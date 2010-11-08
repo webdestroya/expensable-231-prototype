@@ -6,7 +6,7 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
 import expensable.client.ClientFactory;
-import expensable.client.place.ExpenseReportPlace;
+import expensable.client.place.ExpenseReportsPlace;
 import expensable.client.view.expensereport.ExpenseReportView;
 import expensable.client.view.expensereport.ExpenseReportView.ExpenseReportPresenter;
 
@@ -14,7 +14,7 @@ public class ShowExpenseReportActivity extends AbstractActivity implements Expen
   
   private ClientFactory clientFactory;
   
-  public ShowExpenseReportActivity(ExpenseReportPlace place, ClientFactory clientFactory) {
+  public ShowExpenseReportActivity(ExpenseReportsPlace place, ClientFactory clientFactory) {
     this.clientFactory = clientFactory;
   }
 

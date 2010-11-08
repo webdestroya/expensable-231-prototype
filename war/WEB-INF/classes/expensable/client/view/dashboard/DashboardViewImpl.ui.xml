@@ -8,13 +8,13 @@
 		}
 	</ui:style>
 	<g:HTMLPanel>
-		<!-- Add GWT widgets here. Enter < and hit Ctrl-Space to auto-complete 
-			widget names. The ui:field attribute binds an element to a field in the owner 
-			class. See the GWT docs on UI Binder for more details. -->
-		This is the Dashboard
-		<g:Button styleName="{style.important}" ui:field="button" />
-		<a href="#report">Expense Report</a>
-		<br/>
-		<g:Button ui:field="reportButton">Expense Report</g:Button>
+	  <h1>Dashboard</h1>
+		<p>This is the Dashboard</p>
+		<div>
+		  Go to: <a href="#report:">Expense Report</a>
+    </div>
+    <div>
+      button link example: <g:Button ui:field="reportButton">Expense Report</g:Button>
+    </div>
 	</g:HTMLPanel>
 </ui:UiBinder> 
