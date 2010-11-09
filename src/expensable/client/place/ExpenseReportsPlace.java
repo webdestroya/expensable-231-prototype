@@ -5,11 +5,11 @@ import com.google.gwt.place.shared.PlaceTokenizer;
 import com.google.gwt.place.shared.Prefix;
 
 
-public class ExpenseReportPlace extends Place {
+public class ExpenseReportsPlace extends Place {
   
   private String reportId;
   
-  public ExpenseReportPlace(String token) {
+  public ExpenseReportsPlace(String token) {
     this.reportId = token;
   }
   
@@ -18,15 +18,15 @@ public class ExpenseReportPlace extends Place {
   }
   
   @Prefix("report")
-  public static class Tokenizer implements PlaceTokenizer<ExpenseReportPlace> {
+  public static class Tokenizer implements PlaceTokenizer<ExpenseReportsPlace> {
 
     @Override
-    public ExpenseReportPlace getPlace(String token) {
-      return new ExpenseReportPlace(token);
+    public ExpenseReportsPlace getPlace(String token) {
+      return new ExpenseReportsPlace(token);
     }
 
     @Override
-    public String getToken(ExpenseReportPlace place) {
+    public String getToken(ExpenseReportsPlace place) {
       return place.getReportId();
     }
     

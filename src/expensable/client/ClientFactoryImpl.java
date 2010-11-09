@@ -8,8 +8,8 @@ import expensable.client.view.MainLayout;
 import expensable.client.view.MainLayoutImpl;
 import expensable.client.view.dashboard.DashboardView;
 import expensable.client.view.dashboard.DashboardViewImpl;
-import expensable.client.view.expensereport.ExpenseReportView;
-import expensable.client.view.expensereport.ExpenseReportViewImpl;
+import expensable.client.view.expensereport.ExpenseReportsView;
+import expensable.client.view.expensereport.ExpenseReportsViewImpl;
 
 /**
  * Client factory for a standard website (as opposed to a mobile version).
@@ -24,7 +24,7 @@ public class ClientFactoryImpl implements ClientFactory {
   private static final DashboardView dashboardView = new DashboardViewImpl();
 
   // Lazily initialize the non default views
-  private static ExpenseReportView expenseReportView;
+  private static ExpenseReportsView expenseReportView;
 
   @Override
   public EventBus getEventBus() {
@@ -47,9 +47,9 @@ public class ClientFactoryImpl implements ClientFactory {
   }
 
   @Override
-  public ExpenseReportView getExpenseReportView() {
+  public ExpenseReportsView getExpenseReportsView() {
     if (expenseReportView == null) {
-      expenseReportView = new ExpenseReportViewImpl();
+      expenseReportView = new ExpenseReportsViewImpl();
     }
     return expenseReportView;
   }
