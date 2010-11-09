@@ -72,10 +72,15 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
     presenter.onButtonClick(e);
   }
 
+  private volatile int numCols = 0; // TODO(dpurpura): get this from table somehow
+
   /**
    * Add the columns to the table.
    */
   private void initTableColumns(final SelectionModel<? super ExpenseReport> selectionModel) {
+    while (numCols-- > 0) {
+      reports.removeColumn(0);
+    }
 
     // Checkbox column. This table will uses a checkbox column for selection.
     // Alternatively, you can call reports.setSelectionEnabled(true) to enable
@@ -150,6 +155,7 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
 
     });
     reports.addColumn(nameColumn, "Name");
+    numCols = 4;
   }
 
 }
