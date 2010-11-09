@@ -49,7 +49,9 @@ public class ExpensableEntryPoint implements EntryPoint {
     // Goes to place represented on URL or default place
     historyHandler.handleCurrentHistory();
 
-    eventBus.addHandler(PlaceChangeEvent.TYPE, new ChangeSelectedTabHandler(clientFactory));
+    ChangeSelectedTabHandler tabHandler = new ChangeSelectedTabHandler(clientFactory);
+    eventBus.addHandler(PlaceChangeEvent.TYPE, tabHandler);
+    tabHandler.selectTab(placeController.getWhere());
   }
 
   static class ChangeSelectedTabHandler implements PlaceChangeEvent.Handler {
@@ -62,13 +64,15 @@ public class ExpensableEntryPoint implements EntryPoint {
 
     @Override
     public void onPlaceChange(PlaceChangeEvent event) {
-      Place place = event.getNewPlace();
+      selectTab(event.getNewPlace());
+    }
+
+    public void selectTab(Place place) {
       if (place instanceof DashboardPlace) {
         clientFactory.getMainLayout().selectTab(Tab.DASHBOARD);
       } else if (place instanceof ExpenseReportsPlace) {
         clientFactory.getMainLayout().selectTab(Tab.EXPENSE_REPORTS);
       }
-
     }
   }
 }

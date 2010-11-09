@@ -94,7 +94,7 @@
 	  <g:west size="15">
 	    <g:HTMLPanel addStyleNames="nav-container">
 	      <ul class='{style.nav}' ui:field="tabs">
-	        <li ui:field="dashboard" class='{style.selected}'>
+	        <li ui:field="dashboard">
 	          <a href="#dashboard:">Dashboard</a>
 	        </li>
 	        <li ui:field="reports"><a href="#report:1">Expense Reports</a></li>
