@@ -1,3 +1,5 @@
 *.class
+*.swp
 .classpath
+war/WEB-INF/classes/expensable/*
 
