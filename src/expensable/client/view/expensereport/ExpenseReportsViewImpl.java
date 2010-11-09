@@ -35,23 +35,24 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
 
   @UiField Button button;
   @UiField(provided = true) CellTable<ExpenseReport> reports;
-  /*@UiField()*/ SimplePager pager;
+  /*@UiField(provided = true)*/ SimplePager pager;
 
   private ExpenseReportPresenter presenter;
 
   public ExpenseReportsViewImpl() {
     reports = new CellTable<ExpenseReport>(ShowExpenseReportsActivity.KEY_PROVIDER);
+
+    // Create a Pager to control the table.
+    SimplePager.Resources pagerResources = GWT.create(SimplePager.Resources.class);
+    pager = new SimplePager(TextLocation.CENTER, pagerResources, false, 0, true);
+    pager.setDisplay(reports);
+
     initWidget(uiBinder.createAndBindUi(this));
   }
 
   @Override
   public void setPresenter(ExpenseReportPresenter presenter) {
     this.presenter = presenter;
-
-    // Create a Pager to control the table.
-    SimplePager.Resources pagerResources = GWT.create(SimplePager.Resources.class);
-    pager = new SimplePager(TextLocation.CENTER, pagerResources, false, 0, true);
-    pager.setDisplay(reports);
 
     // Add a selection model so we can select cells.
     final MultiSelectionModel<ExpenseReport> selectionModel
