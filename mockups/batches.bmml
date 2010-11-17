@@ -1,0 +1,48 @@
+<mockup version="1.0" skin="sketch" measuredW="958" measuredH="572" mockupW="911" mockupH="562">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="37" y="0" w="911" h="562" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <null/>
+        <text>Batches%20%7C%20ExpensAble%0Ahttp%3A//expensable.com/batches</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="95" y="143" w="803" h="380" measuredW="200" measuredH="186" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>3</selectedIndex>
+        <text>Dashboard%0AExpenses%0ASpot%20Audit%0ABatches</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="182" y="158" w="-1" h="-1" measuredW="70" measuredH="29" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Batches</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Image" x="61" y="79" w="233" h="45" measuredW="77" measuredH="79" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>logo</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="606" y="79" w="-1" h="-1" measuredW="327" measuredH="23" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>user@example.com%20%7C%20%5BSettings%5D%20%7C%20%5BWhat%27s%20New%5D%20%7C%20%5BSign%20out%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::DataGrid" x="181" y="238" w="704" h="263" measuredW="320" measuredH="116" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%5Bx%5D%2C%20Batch%20Id%2C%20Batch%20Name%2C%20Status%0A%5Bx%5D%2C%2012783409%2C%20%5BNovember%20Billing%5D%2C%20Pending%0A%5Bx%5D%2C%2012783456%2C%20%5BCapital%20Expenditures%5D%2C%20Processed%0A%5Bx%5D%2C%2012783498%2C%20%5BClassified%20Expenses%5D%2C%20Pending</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Canvas" x="182" y="194" w="701" h="46" measuredW="100" measuredH="70" zOrder="6" locked="false" isInGroup="-1"/>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::ButtonBar" x="193" y="203" w="220" h="29" measuredW="181" measuredH="29" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>New%2C%20Open%2C%20Export</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Button" x="453" y="203" w="-1" h="-1" measuredW="64" measuredH="28" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Delete</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

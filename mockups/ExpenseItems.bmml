@@ -1,0 +1,84 @@
+<mockup version="1.0" skin="sketch" measuredW="1269" measuredH="648" mockupW="1177" mockupH="623">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="140" y="158" w="882" h="435" measuredW="200" measuredH="186" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>1</selectedIndex>
+        <text>Dashboard%0AExpenses%0AOther%20Tab%0AOther%20Tab</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="82" y="15" w="1177" h="623" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Items%20for%20%22Travel%20to%20Alaska%22%0Ahttp%3A//expensable.com/expenses/1/items</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="227" y="186" w="-1" h="-1" measuredW="141" measuredH="29" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Travel%20to%20Alaska</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Link" x="227" y="166" w="-1" h="-1" measuredW="147" measuredH="20" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>11</size>
+        <text>%3C%20return%20to%20expense%20reports</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="880" y="196" w="-1" h="-1" measuredW="110" measuredH="28" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20New%20Item</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::DataGrid" x="227" y="225" w="758" h="201" measuredW="322" measuredH="176" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <color>12303802</color>
+        <hLines>false</hLines>
+        <selectedIndex>2</selectedIndex>
+        <text>%5Bx%5D%2C%20Date%20Entered%20%5E%2C%20Amount%2C%20Type%2C%20Name%0A%5Bx%5D%2C%2010/10/10%2C%20%2450.00%2C%20Dining%2C%20McDonalds%0A%5Bx%5D%2C%2010/10/10%2C%20%2450.00%2C%20Dining%2C%20McDonalds%0A%5Bx%5D%2C%2010/10/10%2C%20%2450.00%2C%20Dining%2C%20McDonalds%0A%5Bx%5D%2C%2010/10/10%2C%20%2450.00%2C%20Dining%2C%20McDonalds%0A%5Bx%5D%2C%2010/10/10%2C%20%2450.00%2C%20Dining%2C%20McDonalds</text>
+        <value>0</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="227" y="453" w="-1" h="-1" measuredW="113" measuredH="28" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>disabled</state>
+        <text>Attach%20Receipt</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="227" y="433" w="-1" h="-1" measuredW="76" measuredH="20" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>11</size>
+        <text>with%20selected%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="830" y="453" w="123" h="43" measuredW="110" measuredH="28" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>40463</color>
+        <text>Submit%20Report</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Image" x="106" y="94" w="233" h="45" measuredW="77" measuredH="79" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>logo</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="857" y="128" w="-1" h="-1" measuredW="156" measuredH="23" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Welcome%2C%20Vince%20%28%20%5Blogout%5D%20%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="788" y="165" w="202" h="22" measuredW="184" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>12</size>
+        <text>%28Expense%20Report%20ID%3A%20ABC123CDE%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="346" y="453" w="-1" h="-1" measuredW="64" measuredH="28" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>disabled</state>
+        <text>Delete</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

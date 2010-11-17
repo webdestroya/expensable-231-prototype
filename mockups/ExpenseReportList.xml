@@ -1,0 +1,47 @@
+<mockup version="1.0" skin="sketch" measuredW="958" measuredH="572" mockupW="911" mockupH="562">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="37" y="0" w="911" h="562" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <null/>
+        <text>Items%20for%20%22Travel%20to%20Alaska%22%0Ahttp%3A//expensable.com/expenses/1/items</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="95" y="143" w="803" h="380" measuredW="200" measuredH="186" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>1</selectedIndex>
+        <text>Dashboard%0AExpenses%0AOther%20Tab%0AOther%20Tab</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="182" y="158" w="-1" h="-1" measuredW="141" measuredH="29" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Expense%20Reports</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="715" y="190" w="-1" h="-1" measuredW="174" measuredH="28" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20New%20Expense%20Report</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Image" x="61" y="79" w="233" h="45" measuredW="77" measuredH="79" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>logo</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::TabBar" x="175" y="207" w="717" h="309" measuredW="454" measuredH="100" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>All%2C%20Unsubmitted%2C%20Pending%20Approval%2C%20Approved%2C%20Rejected</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::DataGrid" x="181" y="238" w="704" h="263" measuredW="428" measuredH="116" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%5Bx%5D%2C%20Expense%20Report%20Id%2C%20Description%2C%20Status%0A%5Bx%5D%2C%2012783409%2C%20%5BTravel%20to%20Alaska%5D%2C%20Pending%0A%5Bx%5D%2C%2012783456%2C%20%5BMeal%20at%20McDonald%27s%5D%2C%20Approved%0A%5Bx%5D%2C%2012783498%2C%20%5BStay%20at%20the%20Marriot%20Irvine%5D%2C%20Unsubmitted</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Label" x="606" y="79" w="-1" h="-1" measuredW="327" measuredH="23" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>user@example.com%20%7C%20%5BSettings%5D%20%7C%20%5BWhat%27s%20New%5D%20%7C%20%5BSign%20out%5D</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
