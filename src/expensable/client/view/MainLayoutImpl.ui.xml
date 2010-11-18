@@ -73,7 +73,8 @@
 		    <span class="{style.user-info}">
 		      <!-- Note: formating is intentional: span should start at EOL -->
 		      <span class="{style.username}" ui:field="username">user@example.com</span>|<span>
-		        <a href="#">What's New</a></span>|<span>
+		        <a href="#">Settings</a></span>|<span>
+            <a href="#">What's New</a></span>|<span>
 		        <a href="mailto:example@example.com">Send Feedback</a></span>|<span>
 		        <a href="#">Sign out</a></span>
 		    </span>
