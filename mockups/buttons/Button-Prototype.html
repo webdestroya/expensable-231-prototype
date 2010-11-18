@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style type='text/css'>        
+            .button {
+            	border-radius: .5em;
+				-moz-border-radius: .5em;
+				-webkit-border-radius: .5em;
+				box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+				-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+				-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+                cursor: pointer;
+				display: inline-block;
+                outline: none;
+				padding: .5em 2em .55em;
+                text-align: center;
+                text-decoration: none;
+                text-shadow: #000000 1px 0px 1px;
+            }
+            
+            .button:hover {
+                text-decoration: none;
+            }
+            
+            .button:active {
+                position: relative;
+                top: 1px;
+            }
+            
+            .gray {           
+                background: #bebebe;
+                background: -webkit-gradient(linear, left top, left bottom, from(#bebebe), to(#8e8e8e));
+            	background: -moz-linear-gradient(top,  #bebebe,  #8e8e8e);
+				border: solid 1px #999999;
+				color: #ffffff;
+            	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#bebebe', endColorstr='#8e8e8e');
+            }
+            .gray:hover {
+            	background: #5e5e5e;            	
+            	background: -moz-linear-gradient(top,  #5e5e5e,  #6e6e6e);
+				background: -webkit-gradient(linear, left top, left bottom, from(#5e5e5e), to(#6e6e6e));
+            	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#5e5e5e', endColorstr='#6e6e6e');
+            }
+            .gray:active {
+            	background: -moz-linear-gradient(top,  #8e8e8e,  #bebebe);
+				background: -webkit-gradient(linear, left top, left bottom, from(#8e8e8e), to(#bebebe));
+				color: #ffffff;
+            	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#8e8e8e', endColorstr='#bebebe');
+            }
+                    
+        </style>
+        <title>Button Example</title>
+    </head>
+    <body>
+        <h1>Demo Button</h1>
+		<a href="#" class="button gray">Button</a>
+    </body>
+</html>
