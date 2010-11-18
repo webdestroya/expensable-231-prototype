@@ -1,0 +1,5 @@
+Thinks on the left would be for all items, as they always apply. 
+Things on the right would be specific to the item type being entered.
+* Merchant and Location could be auto-suggest fields that start autocompleting as the user types
+ 
+* Make entry type be autocomplete
