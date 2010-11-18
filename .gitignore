@@ -1,4 +1,5 @@
 *.class
+*.DS_Store
 *.swp
 .classpath
 war/WEB-INF/classes/expensable/*
