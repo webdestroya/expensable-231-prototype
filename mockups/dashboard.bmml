@@ -11,10 +11,10 @@
       </controlProperties>
     </control>
     <control controlID="8" controlTypeID="com.balsamiq.mockups::Canvas" x="413" y="83" w="578" h="29" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
-    <control controlID="10" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="284" y="118" w="698" h="389" measuredW="200" measuredH="209" zOrder="3" locked="true" isInGroup="-1">
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="284" y="118" w="698" h="389" measuredW="200" measuredH="186" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <selectedIndex>0</selectedIndex>
-        <text>Dashboard%0AExpense%20Reports%0ACorp.%20Transactions%0APersonal%20Transactions%0ATravel%20Booking</text>
+        <text>Dashboard%0AExpenses%20%283%29%0ASpot%20Audit%0ABatches</text>
       </controlProperties>
     </control>
     <control controlID="17" controlTypeID="com.balsamiq.mockups::LineChart" x="451" y="143" w="497" h="95" measuredW="187" measuredH="175" zOrder="4" locked="true" isInGroup="-1"/>
@@ -155,9 +155,9 @@
         <value>31</value>
       </controlProperties>
     </control>
-    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="656" y="85" w="-1" h="-1" measuredW="327" measuredH="23" zOrder="23" locked="false" isInGroup="-1">
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="556" y="85" w="-1" h="-1" measuredW="429" measuredH="23" zOrder="23" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>user@example.com%20%7C%20%5BSettings%5D%20%7C%20%5BWhat%27s%20New%5D%20%7C%20%5BSign%20out%5D</text>
+        <text>user@example.com%20%7C%20%5BSettings%5D%20%7C%20%5BWhat%27s%20New%5D%20%7C%20%5BSend%20Feedback%5D%20%7C%20%5BSign%20out%5D</text>
       </controlProperties>
     </control>
   </controls>

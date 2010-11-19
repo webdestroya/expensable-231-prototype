@@ -44,14 +44,16 @@
         <text>Remove</text>
       </controlProperties>
     </control>
-    <control controlID="20" controlTypeID="com.balsamiq.mockups::BreadCrumbs" x="183" y="156" w="-1" h="-1" measuredW="170" measuredH="23" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::Button" x="805" y="231" w="-1" h="-1" measuredW="69" measuredH="28" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Batches%2C%20November%20Billing</text>
+        <color>40463</color>
+        <text>Process</text>
       </controlProperties>
     </control>
-    <control controlID="21" controlTypeID="com.balsamiq.mockups::Button" x="805" y="231" w="-1" h="-1" measuredW="69" measuredH="28" zOrder="10" locked="false" isInGroup="-1">
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::Link" x="182" y="158" w="-1" h="-1" measuredW="104" measuredH="20" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Process</text>
+        <size>11</size>
+        <text>%3C%20return%20to%20batches</text>
       </controlProperties>
     </control>
   </controls>

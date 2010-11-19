@@ -1,12 +1,12 @@
-<mockup version="1.0" skin="sketch" measuredW="1269" measuredH="648" mockupW="1177" mockupH="623">
+<mockup version="1.0" skin="sketch" measuredW="1063" measuredH="648" mockupW="971" mockupH="623">
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="140" y="158" w="882" h="435" measuredW="200" measuredH="186" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <selectedIndex>1</selectedIndex>
-        <text>Dashboard%0AExpenses%0AOther%20Tab%0AOther%20Tab</text>
+        <text>Dashboard%0AExpenses%0ASpot%20Audit%0ABatches</text>
       </controlProperties>
     </control>
-    <control controlID="1" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="82" y="15" w="1177" h="623" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="82" y="15" w="971" h="623" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Items%20for%20%22Travel%20to%20Alaska%22%0Ahttp%3A//expensable.com/expenses/1/items</text>
       </controlProperties>
@@ -28,7 +28,7 @@
         <text>Add%20New%20Item</text>
       </controlProperties>
     </control>
-    <control controlID="5" controlTypeID="com.balsamiq.mockups::DataGrid" x="227" y="225" w="758" h="201" measuredW="322" measuredH="176" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::DataGrid" x="227" y="225" w="758" h="201" measuredW="338" measuredH="176" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <alternateRowColor>16777215</alternateRowColor>
         <color>12303802</color>
@@ -63,21 +63,21 @@
         <text>logo</text>
       </controlProperties>
     </control>
-    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="857" y="128" w="-1" h="-1" measuredW="156" measuredH="23" zOrder="10" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Welcome%2C%20Vince%20%28%20%5Blogout%5D%20%29</text>
-      </controlProperties>
-    </control>
-    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="788" y="165" w="202" h="22" measuredW="184" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="788" y="165" w="202" h="22" measuredW="184" measuredH="21" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
         <size>12</size>
         <text>%28Expense%20Report%20ID%3A%20ABC123CDE%29</text>
       </controlProperties>
     </control>
-    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="346" y="453" w="-1" h="-1" measuredW="64" measuredH="28" zOrder="12" locked="false" isInGroup="-1">
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="346" y="453" w="-1" h="-1" measuredW="64" measuredH="28" zOrder="11" locked="false" isInGroup="-1">
       <controlProperties>
         <state>disabled</state>
         <text>Delete</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Label" x="695" y="94" w="-1" h="-1" measuredW="327" measuredH="23" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>user@example.com%20%7C%20%5BSettings%5D%20%7C%20%5BWhat%27s%20New%5D%20%7C%20%5BSign%20out%5D</text>
       </controlProperties>
     </control>
   </controls>

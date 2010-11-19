@@ -9,7 +9,7 @@
     <control controlID="1" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="95" y="143" w="803" h="380" measuredW="200" measuredH="186" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <selectedIndex>1</selectedIndex>
-        <text>Dashboard%0AExpenses%0AOther%20Tab%0AOther%20Tab</text>
+        <text>Dashboard%0AExpenses%20%283%29%0ASpot%20Audit%0ABatches</text>
       </controlProperties>
     </control>
     <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="182" y="158" w="-1" h="-1" measuredW="141" measuredH="29" zOrder="2" locked="false" isInGroup="-1">
@@ -28,9 +28,10 @@
         <text>logo</text>
       </controlProperties>
     </control>
-    <control controlID="15" controlTypeID="com.balsamiq.mockups::TabBar" x="175" y="207" w="717" h="309" measuredW="454" measuredH="100" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::TabBar" x="175" y="207" w="717" h="309" measuredW="510" measuredH="100" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>All%2C%20Unsubmitted%2C%20Pending%20Approval%2C%20Approved%2C%20Rejected</text>
+        <selectedIndex>0</selectedIndex>
+        <text>All%20%283%29%2C%20Unsubmitted%20%281%29%2C%20Pending%20Approval%2C%20Approved%20%281%29%2C%20Rejected</text>
       </controlProperties>
     </control>
     <control controlID="16" controlTypeID="com.balsamiq.mockups::DataGrid" x="181" y="238" w="704" h="263" measuredW="428" measuredH="116" zOrder="6" locked="false" isInGroup="-1">
