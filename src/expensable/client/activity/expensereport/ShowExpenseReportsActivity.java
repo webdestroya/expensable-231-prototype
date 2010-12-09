@@ -16,11 +16,12 @@ import com.google.gwt.view.client.ProvidesKey;
 import expensable.client.ClientFactory;
 import expensable.client.place.ExpenseReportsPlace;
 import expensable.client.view.expensereport.ExpenseReportsView;
-import expensable.client.view.expensereport.ExpenseReportsView.ExpenseReportPresenter;
+import expensable.client.view.expensereport.ExpenseReportsView.ExpenseReportsPresenter;
 import expensable.shared.models.ExpenseReport;
 import expensable.shared.models.ExpenseType;
 
-public class ShowExpenseReportsActivity extends AbstractActivity implements ExpenseReportPresenter {
+public class ShowExpenseReportsActivity extends AbstractActivity
+    implements ExpenseReportsPresenter {
 
   /**
    * The key provider that provides the unique ID of a report.

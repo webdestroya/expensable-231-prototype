@@ -11,9 +11,9 @@ import expensable.client.view.dashboard.DashboardView;
 import expensable.client.view.dashboard.DashboardView.DashboardPresenter;
 
 public class ShowDashboardActivity extends AbstractActivity implements DashboardPresenter {
-  
+
   private ClientFactory clientFactory;
-  
+
   public ShowDashboardActivity(DashboardPlace place, ClientFactory clientFactory) {
     this.clientFactory = clientFactory;
   }
@@ -21,7 +21,6 @@ public class ShowDashboardActivity extends AbstractActivity implements Dashboard
   @Override
   public void start(AcceptsOneWidget container, EventBus eventBus) {
     DashboardView view = clientFactory.getDashboardView();
-    // view.setValue(dashboardPlace.getToken());
     view.setPresenter(this);
     container.setWidget(view.asWidget());
   }

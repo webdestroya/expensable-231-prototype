@@ -11,6 +11,9 @@
 	</ui:style>
 	<g:HTMLPanel>
 		<h1>Expense Reports</h1>
+		<p>
+		  go to: <a href="#reports:rid=1">sample report</a>
+		</p>
 		<g:Button styleName="{style.important}" ui:field="button">Example Button</g:Button>
 		<c:CellTable ui:field="reports" pageSize="15"/>
 	</g:HTMLPanel>

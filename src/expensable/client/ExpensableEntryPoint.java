@@ -13,8 +13,10 @@ import com.google.gwt.user.client.ui.RootLayoutPanel;
 
 import expensable.client.mvp.AppActivityMapper;
 import expensable.client.mvp.AppPlaceHistoryMapper;
+import expensable.client.place.BatchesPlace;
 import expensable.client.place.DashboardPlace;
 import expensable.client.place.ExpenseReportsPlace;
+import expensable.client.place.SpotAuditPlace;
 import expensable.client.view.MainLayout.Tab;
 
 /**
@@ -72,6 +74,10 @@ public class ExpensableEntryPoint implements EntryPoint {
         clientFactory.getMainLayout().selectTab(Tab.DASHBOARD);
       } else if (place instanceof ExpenseReportsPlace) {
         clientFactory.getMainLayout().selectTab(Tab.EXPENSE_REPORTS);
+      } else if (place instanceof SpotAuditPlace) {
+        clientFactory.getMainLayout().selectTab(Tab.SPOT_AUDIT);
+      } else if (place instanceof BatchesPlace) {
+        clientFactory.getMainLayout().selectTab(Tab.BATCHES);
       }
     }
   }

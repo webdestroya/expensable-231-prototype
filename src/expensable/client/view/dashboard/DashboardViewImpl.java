@@ -33,11 +33,6 @@ public class DashboardViewImpl extends Composite implements DashboardView {
   }
 
   @Override
-  public Widget asWidget() {
-    return this;
-  }
-
-  @Override
   public void setPresenter(DashboardPresenter presenter) {
     this.presenter = presenter;
   }

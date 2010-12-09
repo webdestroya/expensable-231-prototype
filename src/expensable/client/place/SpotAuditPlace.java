@@ -16,7 +16,7 @@ public class SpotAuditPlace extends Place {
     return token;
   }
 
-  @Prefix("spotaudit")
+  @Prefix("spot-audit")
   public static class Tokenizer implements PlaceTokenizer<SpotAuditPlace> {
 
     @Override

@@ -37,7 +37,7 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
   @UiField(provided = true) CellTable<ExpenseReport> reports;
   /*@UiField(provided = true)*/ SimplePager pager;
 
-  private ExpenseReportPresenter presenter;
+  private ExpenseReportsPresenter presenter;
 
   public ExpenseReportsViewImpl() {
     reports = new CellTable<ExpenseReport>(ShowExpenseReportsActivity.KEY_PROVIDER);
@@ -51,7 +51,7 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
   }
 
   @Override
-  public void setPresenter(ExpenseReportPresenter presenter) {
+  public void setPresenter(ExpenseReportsPresenter presenter) {
     this.presenter = presenter;
 
     // Add a selection model so we can select cells.

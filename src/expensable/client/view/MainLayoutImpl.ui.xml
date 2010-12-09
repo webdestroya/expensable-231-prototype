@@ -98,9 +98,9 @@
 	        <li ui:field="dashboard">
 	          <a href="#dashboard:">Dashboard</a>
 	        </li>
-	        <li ui:field="reports"><a href="#reports:1">Expense Reports</a></li>
-	        <li ui:field="spotAudit"><a href="#audit">Spot Audit</a></li>
-	        <li ui:field="batches"><a href="#batches">Batches</a></li>
+	        <li ui:field="reports"><a href="#reports:">Expense Reports</a></li>
+	        <li ui:field="spotAudit"><a href="#spot-audit:">Spot Audit</a></li>
+	        <li ui:field="batches"><a href="#batches:">Batches</a></li>
 	      </ul>
       </g:HTMLPanel>
 	  </g:west>

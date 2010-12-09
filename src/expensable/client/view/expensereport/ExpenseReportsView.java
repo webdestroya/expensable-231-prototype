@@ -6,15 +6,15 @@ import com.google.gwt.view.client.ProvidesKey;
 
 import expensable.client.mvp.Presenter;
 import expensable.client.mvp.View;
-import expensable.client.view.expensereport.ExpenseReportsView.ExpenseReportPresenter;
+import expensable.client.view.expensereport.ExpenseReportsView.ExpenseReportsPresenter;
 import expensable.shared.models.ExpenseReport;
 
 /**
  * @author dpurpura (David Purpura)
  */
-public interface ExpenseReportsView extends View<ExpenseReportPresenter> {
+public interface ExpenseReportsView extends View<ExpenseReportsPresenter> {
 
-  interface ExpenseReportPresenter extends Presenter {
+  interface ExpenseReportsPresenter extends Presenter {
 
     /** Example code for a button click */
     void onButtonClick(ClickEvent e);
