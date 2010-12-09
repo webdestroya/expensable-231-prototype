@@ -1,4 +1,4 @@
-package expensable.client.activity.report;
+package expensable.client.activity.expensereport;
 
 import java.util.Date;
 import java.util.List;

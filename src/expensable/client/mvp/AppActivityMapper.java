@@ -6,7 +6,7 @@ import com.google.gwt.place.shared.Place;
 
 import expensable.client.ClientFactory;
 import expensable.client.activity.dashboard.ShowDashboardActivity;
-import expensable.client.activity.report.ShowExpenseReportsActivity;
+import expensable.client.activity.expensereport.ShowExpenseReportsActivity;
 import expensable.client.place.DashboardPlace;
 import expensable.client.place.ExpenseReportsPlace;
 
