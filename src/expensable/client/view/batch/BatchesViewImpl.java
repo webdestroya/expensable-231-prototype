@@ -94,7 +94,7 @@ presenter.addReportsDisplay(reports);
         = new Column<Batch, SafeHtml>(new SafeHtmlCell()) {
       @Override
       public SafeHtml getValue(Batch report) {
-        return new OnlyToBeUsedInGeneratedCodeStringBlessedAsSafeHtml("<a href=\"#batches:id=12345\">"+report.getName()+"</a>");
+        return new OnlyToBeUsedInGeneratedCodeStringBlessedAsSafeHtml("<a href=\"#batches:id=12345\">"+report.getId()+"</a>");
       }
     };
     /*idColumn.setFieldUpdater(new FieldUpdater<Batch, String>() {
