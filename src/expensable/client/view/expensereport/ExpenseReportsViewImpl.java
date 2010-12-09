@@ -23,7 +23,7 @@ import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.MultiSelectionModel;
 import com.google.gwt.view.client.SelectionModel;
 
-import expensable.client.activity.report.ShowExpenseReportsActivity;
+import expensable.client.activity.expensereport.ShowExpenseReportsActivity;
 import expensable.shared.models.ExpenseReport;
 
 public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsView {
