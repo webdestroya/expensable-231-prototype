@@ -1,14 +1,21 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+xmlns:c="urn:import:com.google.gwt.user.cellview.client"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		/* Add CSS here. See the GWT docs on UI Binder for more details */
 		.important {
-			font-weight: bold;
+			font-weight: normal;
 		}
 	</ui:style>
 	<g:HTMLPanel>
 	  <h1>Batches</h1>
-		<p>This is the Batches page</p>
+	  <input type="button" value="New" />
+	  <input type="button" value="Open" />
+	  <input type="button" value="Export" />
+	  
+	  <input type="button" value="Delete" />
+	  <c:CellTable ui:field="reports" pageSize="15"/>
+		
 	</g:HTMLPanel>
 </ui:UiBinder> 

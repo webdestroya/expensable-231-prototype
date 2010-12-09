@@ -79,7 +79,7 @@
 		        <a href="#">Sign out</a></span>
 		    </span>
 		    <a href="#"><img title="ExpensAble" 
-		        src="https://server.expensable.com/EComImages/menu/EXP_UI_logo.gif"/></a>
+		        src="https://server.expensable.com/EComImages/menu/EXP_UI_logo.gif" border="0"/></a>
 	    </g:HTMLPanel>
 	  </g:north>
 	  <!--  note: south must be before west in order to extend across the entire screen -->

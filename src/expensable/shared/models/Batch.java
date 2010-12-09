@@ -2,6 +2,8 @@ package expensable.shared.models;
 
 import java.util.Date;
 
+import com.google.gwt.user.client.Random;
+
 public class Batch {
 
   /** The cost of the item in cents */
@@ -9,6 +11,14 @@ public class Batch {
   private Date date;
   private String name;
   private String status;
+  public Batch() {
+	  
+  }
+  public Batch(String name, String status) {
+	  this.name = name;
+	  this.status = status;
+	  this.id = (Integer.MAX_VALUE/2)+Random.nextInt(Integer.MAX_VALUE/2);
+  }
   
 public Date getDate() {
 	return date;
