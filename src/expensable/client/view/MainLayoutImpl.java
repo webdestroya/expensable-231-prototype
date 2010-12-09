@@ -17,29 +17,31 @@ public class MainLayoutImpl extends Composite implements MainLayout {
   private static Binder uiBinder = GWT.create(Binder.class);
 
   interface Binder extends UiBinder<Widget, MainLayoutImpl> {}
-  
+
   @UiField Style style;
   @UiField SpanElement username;
   @UiField UListElement tabs;
   @UiField LIElement dashboard;
   @UiField LIElement reports;
+  @UiField LIElement spotAudit;
+  @UiField LIElement batches;
   @UiField SimplePanel content;
 
   public MainLayoutImpl() {
     initWidget(uiBinder.createAndBindUi(this));
   }
-  
-  @Override 
+
+  @Override
   public Widget asWidget() {
     return this;
   }
-  
+
   @Override
   public void setWidget(IsWidget w) {
     content.clear();
     content.add(w);
   }
-  
+
   @Override
   public void selectTab(Tab tab) {
     for (int i = 0; i < tabs.getChildCount(); i++) {
@@ -53,17 +55,19 @@ public class MainLayoutImpl extends Composite implements MainLayout {
         }
       }
     }
-    
+
     LIElement li;
     switch(tab) {
+      case BATCHES:         li = batches;   break;
       case DASHBOARD:       li = dashboard; break;
-      case EXPENSE_REPORTS: li = reports; break;
+      case EXPENSE_REPORTS: li = reports;   break;
+      case SPOT_AUDIT:      li = spotAudit; break;
       default: throw new UnsupportedOperationException("unhandled tab: " + tab);
     }
     System.out.println(li.getNodeValue());
     li.addClassName(style.selected());
   }
-  
+
   public SimplePanel getContent() {
     return content;
   }
@@ -71,7 +75,7 @@ public class MainLayoutImpl extends Composite implements MainLayout {
   public String getUserName() {
     return username.getInnerText();
   }
-  
+
   @Override
   public void setUserName(String username) {
     this.username.setInnerText(username);
