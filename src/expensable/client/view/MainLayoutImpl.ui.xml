@@ -3,7 +3,7 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style type="expensable.client.view.MainLayout.Style">
 	  .header, .footer {
-	  	background: #003E64;
+	  	background: #00395E;
 	  }
 	  .header {
 	    border-bottom: 2px solid #001E44;
