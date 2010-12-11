@@ -1,20 +1,23 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:d="urn:import:expensable.client.view.dashboard"
+  xmlns:e="urn:import:expensable.client.view.widget"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		/* Add CSS here. See the GWT docs on UI Binder for more details */
 		.important {
 			font-weight: bold;
 		}
+		.center {
+			margin: auto;
+			width: 300px;
+		}
 	</ui:style>
-	<g:HTMLPanel>
-	  <h1>Dashboard</h1>
-		<p>This is the Dashboard</p>
-		<div>
-		  Go to: <a href="#report:">Expense Report</a>
-    </div>
-    <div>
-      button link example: <g:Button ui:field="reportButton">Expense Report</g:Button>
-    </div>
-	</g:HTMLPanel>
+	<g:ScrollPanel>
+		<g:HTMLPanel>
+		  <h1>Dashboard</h1>
+			<p>This is the Dashboard</p>
+	    <d:NewsFeedView ui:field="newsfeed" addStyleNames="{style.center}"/>
+		</g:HTMLPanel>
+	</g:ScrollPanel>
 </ui:UiBinder> 

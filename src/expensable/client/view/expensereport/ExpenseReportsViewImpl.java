@@ -17,13 +17,13 @@ import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.SimplePager;
 import com.google.gwt.user.cellview.client.SimplePager.TextLocation;
-import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.MultiSelectionModel;
 import com.google.gwt.view.client.SelectionModel;
 
-import expensable.client.activity.report.ShowExpenseReportsActivity;
+import expensable.client.activity.expensereport.ShowExpenseReportsActivity;
+import expensable.client.view.widget.Button;
 import expensable.shared.models.ExpenseReport;
 
 public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsView {
@@ -37,7 +37,7 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
   @UiField(provided = true) CellTable<ExpenseReport> reports;
   /*@UiField(provided = true)*/ SimplePager pager;
 
-  private ExpenseReportPresenter presenter;
+  private ExpenseReportsPresenter presenter;
 
   public ExpenseReportsViewImpl() {
     reports = new CellTable<ExpenseReport>(ShowExpenseReportsActivity.KEY_PROVIDER);
@@ -51,7 +51,7 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
   }
 
   @Override
-  public void setPresenter(ExpenseReportPresenter presenter) {
+  public void setPresenter(ExpenseReportsPresenter presenter) {
     this.presenter = presenter;
 
     // Add a selection model so we can select cells.

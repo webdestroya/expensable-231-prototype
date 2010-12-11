@@ -79,7 +79,7 @@
 		        <a href="#">Sign out</a></span>
 		    </span>
 		    <a href="#"><img title="ExpensAble" 
-		        src="https://server.expensable.com/EComImages/menu/EXP_UI_logo.gif"/></a>
+		        src="https://server.expensable.com/EComImages/menu/EXP_UI_logo.gif" border="0"/></a>
 	    </g:HTMLPanel>
 	  </g:north>
 	  <!--  note: south must be before west in order to extend across the entire screen -->
@@ -92,15 +92,15 @@
         </div>
       </g:HTMLPanel>
     </g:south>
-	  <g:west size="15">
+	  <g:west size="13">
 	    <g:HTMLPanel addStyleNames="nav-container">
 	      <ul class='{style.nav}' ui:field="tabs">
 	        <li ui:field="dashboard">
 	          <a href="#dashboard:">Dashboard</a>
 	        </li>
-	        <li ui:field="reports"><a href="#report:1">Expense Reports</a></li>
-	        <li>Corporate Transactions</li>
-	        <li>Personal Transactions</li>
+	        <li ui:field="reports"><a href="#reports:">Expense Reports</a></li>
+	        <li ui:field="spotAudit"><a href="#spot-audit:">Spot Audit</a></li>
+	        <li ui:field="batches"><a href="#batches:">Batches</a></li>
 	      </ul>
       </g:HTMLPanel>
 	  </g:west>

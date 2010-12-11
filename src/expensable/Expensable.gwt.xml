@@ -2,17 +2,21 @@
 <module rename-to='expensable'>
   <!-- Inherit the core Web Toolkit stuff.                        -->
   <inherits name='com.google.gwt.user.User'/>
-
-  <!-- Inherit the default GWT style sheet.  You can change       -->
-  <!-- the theme of your GWT application by uncommenting          -->
-  <!-- any one of the following lines.                            -->
+  
+  <!-- Inherit the default GWT style sheet.                       -->
    <inherits name='com.google.gwt.user.theme.standard.Standard'/> 
-  <!--  <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> --> 
-  <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
-
+  
   <!-- Other module inherits                                      -->
   <inherits name="com.google.gwt.activity.Activity"/>
   <inherits name="com.google.gwt.place.Place"/>
+
+  <!--  Add Google's Guava collections                            -->
+  <inherits name='com.google.common.annotations.Annotations'/>
+  <inherits name='com.google.common.base.Base'/>
+  <inherits name='com.google.common.collect.Collect'/>
+  <inherits name='com.google.common.net.Net'/>
+  <inherits name='com.google.common.primitives.Primitives'/>
+  <inherits name='java.util.Util'/>
 
   <!-- Specify the app entry point class.                         -->
   <entry-point class='expensable.client.ExpensableEntryPoint'/>
