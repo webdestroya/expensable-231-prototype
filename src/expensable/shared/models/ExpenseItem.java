@@ -2,14 +2,19 @@ package expensable.shared.models;
 
 import java.util.Date;
 
-public class ExpenseItem {
+public class ExpenseItem implements NewsItem {
 
   /** The cost of the item in cents */
   private int amount;
   private Date purchaseDate;
+  private Date lastModified;
   private String location;
   private String merchant;
   private String description;
+
+  public ExpenseItem() {
+    this.lastModified = new Date();
+  }
 
   /**
    * @return the amount
@@ -37,6 +42,16 @@ public class ExpenseItem {
    */
   public void setPurchaseDate(Date purchaseDate) {
     this.purchaseDate = purchaseDate;
+  }
+
+  @Override
+  public Date getLastModified() {
+    return lastModified;
+  }
+
+  @Override
+  public String getName() {
+    return getDescription();
   }
 
   /**

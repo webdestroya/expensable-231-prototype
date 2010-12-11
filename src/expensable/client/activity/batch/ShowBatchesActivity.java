@@ -1,6 +1,5 @@
 package expensable.client.activity.batch;
 
-import java.util.Date;
 import java.util.List;
 
 import com.google.gwt.activity.shared.AbstractActivity;
@@ -16,8 +15,6 @@ import expensable.client.place.BatchesPlace;
 import expensable.client.view.batch.BatchesView;
 import expensable.client.view.batch.BatchesView.BatchesPresenter;
 import expensable.shared.models.Batch;
-import expensable.shared.models.ExpenseReport;
-import expensable.shared.models.ExpenseType;
 
 public class ShowBatchesActivity extends AbstractActivity implements BatchesPresenter {
 
@@ -37,11 +34,10 @@ public class ShowBatchesActivity extends AbstractActivity implements BatchesPres
 
   };
 
-  
   public ShowBatchesActivity(BatchesPlace place, ClientFactory clientFactory) {
     this.clientFactory = clientFactory;
     this.dataProvider = new ListDataProvider<Batch>();
-    stubReports();
+    stubBatches(dataProvider.getList());
   }
 
   @Override
@@ -55,7 +51,6 @@ public class ShowBatchesActivity extends AbstractActivity implements BatchesPres
   public void goTo(Place place) {
     clientFactory.getPlaceController().goTo(place);
   }
-  
 
   @Override
   public void addReportsDisplay(CellTable<Batch> reports) {
@@ -66,25 +61,19 @@ public class ShowBatchesActivity extends AbstractActivity implements BatchesPres
   public void refreshDisplays() {
     dataProvider.refresh();
   }
-  
 
-  @SuppressWarnings("deprecation") // Using deprecated date for quick stub
-  List<Batch> stubReports() {
-    List<Batch> reports = dataProvider.getList();
-
-    reports.add(new Batch("November Billing","Pending"));
-    reports.add(new Batch("December Billing","Pending"));
-    reports.add(new Batch("January Billing","Pending"));
-    reports.add(new Batch("August Billing","Pending"));
-    reports.add(new Batch("September Billing","Pending"));
-    reports.add(new Batch("October Billing","Pending"));
-
-    return reports;
+  public static void stubBatches(List<? super Batch> reports) {
+    reports.add(new Batch(234232, "November Billing","Pending"));
+    reports.add(new Batch(442244, "December Billing","Pending"));
+    reports.add(new Batch(456445, "January Billing","Pending"));
+    reports.add(new Batch(684368, "August Billing","Pending"));
+    reports.add(new Batch(233461, "September Billing","Pending"));
+    reports.add(new Batch(724572, "October Billing","Pending"));
   }
 
   @Override
   public ProvidesKey<Batch> getKeyProvider() {
     return KEY_PROVIDER;
   }
-  
+
 }

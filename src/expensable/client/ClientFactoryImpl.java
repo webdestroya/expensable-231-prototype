@@ -6,6 +6,8 @@ import com.google.gwt.place.shared.PlaceController;
 
 import expensable.client.view.MainLayout;
 import expensable.client.view.MainLayoutImpl;
+import expensable.client.view.batch.BatchView;
+import expensable.client.view.batch.BatchViewImpl;
 import expensable.client.view.batch.BatchesView;
 import expensable.client.view.batch.BatchesViewImpl;
 import expensable.client.view.dashboard.DashboardView;
@@ -36,6 +38,7 @@ public class ClientFactoryImpl implements ClientFactory {
   private static final DashboardView dashboardView = new DashboardViewImpl();
 
   // Lazily initialize the non default views
+  private static BatchView batchView;
   private static BatchesView batchesView;
   private static ExpenseReportView expenseReportView;
   private static ExpenseItemView expenseItemView;
@@ -56,6 +59,14 @@ public class ClientFactoryImpl implements ClientFactory {
   @Override
   public MainLayout getMainLayout() {
     return mainLayout;
+  }
+
+  @Override
+  public BatchView getBatchView() {
+    if (batchView == null) {
+      batchView = new BatchViewImpl();
+    }
+    return batchView;
   }
 
   @Override

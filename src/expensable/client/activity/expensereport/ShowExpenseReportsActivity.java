@@ -44,7 +44,7 @@ public class ShowExpenseReportsActivity extends AbstractActivity
   public ShowExpenseReportsActivity(ExpenseReportsPlace place, ClientFactory clientFactory) {
     this.dataProvider = new ListDataProvider<ExpenseReport>();
     this.clientFactory = clientFactory;
-    stubReports();
+    stubReports(dataProvider.getList());
   }
 
   @Override
@@ -81,9 +81,7 @@ public class ShowExpenseReportsActivity extends AbstractActivity
   }
 
   @SuppressWarnings("deprecation") // Using deprecated date for quick stub
-  List<ExpenseReport> stubReports() {
-    List<ExpenseReport> reports = dataProvider.getList();
-
+  public static void stubReports(List<? super ExpenseReport> reports) {
     ExpenseReport report = new ExpenseReport();
     report.setId("1");
     report.setName("Trip to Alaska");
@@ -107,8 +105,6 @@ public class ShowExpenseReportsActivity extends AbstractActivity
     report.setCreatedDate(new Date(110, 10, 15));
     report.setType(new ExpenseType("Office Supplies"));
     reports.add(report);
-
-    return reports;
   }
 
 }

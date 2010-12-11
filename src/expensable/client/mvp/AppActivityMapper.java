@@ -6,6 +6,7 @@ import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;
 
 import expensable.client.ClientFactory;
+import expensable.client.activity.batch.ShowBatchActivity;
 import expensable.client.activity.batch.ShowBatchesActivity;
 import expensable.client.activity.dashboard.ShowDashboardActivity;
 import expensable.client.activity.expensereport.CreateExpenseReportActivity;
@@ -38,7 +39,12 @@ public class AppActivityMapper implements ActivityMapper {
   public Activity getActivity(Place place) {
     // TODO(dpurpura): change this to use gin
     if (place instanceof BatchesPlace) {
-      return new ShowBatchesActivity((BatchesPlace) place, clientFactory);
+      BatchesPlace p = (BatchesPlace) place;
+      if (Strings.isNullOrEmpty(p.getBatchId())) {
+        return new ShowBatchesActivity(p, clientFactory);
+      } else {
+        return new ShowBatchActivity(p, clientFactory);
+      }
     } else if (place instanceof DashboardPlace) {
       System.out.println("dashboard");
       return new ShowDashboardActivity((DashboardPlace) place, clientFactory);

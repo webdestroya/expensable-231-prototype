@@ -92,7 +92,7 @@
         </div>
       </g:HTMLPanel>
     </g:south>
-	  <g:west size="15">
+	  <g:west size="13">
 	    <g:HTMLPanel addStyleNames="nav-container">
 	      <ul class='{style.nav}' ui:field="tabs">
 	        <li ui:field="dashboard">
