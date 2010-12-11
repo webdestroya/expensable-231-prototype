@@ -10,6 +10,8 @@ import expensable.client.view.batch.BatchesView;
 import expensable.client.view.batch.BatchesViewImpl;
 import expensable.client.view.dashboard.DashboardView;
 import expensable.client.view.dashboard.DashboardViewImpl;
+import expensable.client.view.expensereport.CreateExpenseReportView;
+import expensable.client.view.expensereport.CreateExpenseReportViewImpl;
 import expensable.client.view.expensereport.ExpenseReportView;
 import expensable.client.view.expensereport.ExpenseReportViewImpl;
 import expensable.client.view.expensereport.ExpenseReportsView;
@@ -39,6 +41,7 @@ public class ClientFactoryImpl implements ClientFactory {
   private static ExpenseItemView expenseItemView;
   private static ExpenseReportsView expenseReportsView;
   private static SpotAuditView spotAuditView;
+  private static CreateExpenseReportView createExpenseReportView;
 
   @Override
   public EventBus getEventBus() {
@@ -103,6 +106,14 @@ public class ClientFactoryImpl implements ClientFactory {
       spotAuditView = new SpotAuditViewImpl();
     }
     return spotAuditView;
+  }
+  
+  @Override
+  public CreateExpenseReportView getCreateExpenseReportView() {
+    if (createExpenseReportView == null) {
+    	createExpenseReportView = new CreateExpenseReportViewImpl();
+    }
+    return createExpenseReportView;
   }
 
 }

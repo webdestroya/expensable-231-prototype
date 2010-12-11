@@ -6,6 +6,7 @@ import com.google.gwt.place.shared.PlaceController;
 import expensable.client.view.MainLayout;
 import expensable.client.view.batch.BatchesView;
 import expensable.client.view.dashboard.DashboardView;
+import expensable.client.view.expensereport.CreateExpenseReportView;
 import expensable.client.view.expensereport.ExpenseReportView;
 import expensable.client.view.expensereport.ExpenseReportsView;
 import expensable.client.view.expensereport.item.ExpenseItemView;
@@ -25,4 +26,5 @@ public interface ClientFactory {
   ExpenseReportView getExpenseReportView();
   ExpenseReportsView getExpenseReportsView();
   SpotAuditView getSpotAuditView();
+  CreateExpenseReportView getCreateExpenseReportView();
 }
