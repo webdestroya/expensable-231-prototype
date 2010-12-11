@@ -1,19 +1,26 @@
 package expensable.client.place;
 
+import java.util.HashMap;
+
+import com.google.common.base.Strings;
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 import com.google.gwt.place.shared.Prefix;
 
+import expensable.client.util.Tokenizers;
+
 public class BatchesPlace extends Place {
 
-  private String token;
+  public static String BATCH_ID_KEY = "id";
 
-  public BatchesPlace(String token) {
-    this.token = token;
+  private String batchId;
+
+  public BatchesPlace(String batchId) {
+    this.batchId = batchId;
   }
 
-  public String getToken() {
-    return token;
+  public String getBatchId() {
+    return batchId;
   }
 
   @Prefix("batches")
@@ -21,12 +28,17 @@ public class BatchesPlace extends Place {
 
     @Override
     public BatchesPlace getPlace(String token) {
-      return new BatchesPlace(token);
+      HashMap<String, String> map = Tokenizers.tokenizeQueryString(token);
+      return new BatchesPlace(map.get(BATCH_ID_KEY));
     }
 
     @Override
     public String getToken(BatchesPlace place) {
-      return place.getToken();
+      StringBuilder sb = new StringBuilder();
+      if (!Strings.isNullOrEmpty(place.getBatchId())) {
+        sb.append(BATCH_ID_KEY).append("=").append(place.getBatchId());
+      }
+      return sb.toString();
     }
 
   }

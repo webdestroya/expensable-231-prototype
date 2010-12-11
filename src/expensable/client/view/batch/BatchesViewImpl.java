@@ -3,6 +3,7 @@ package expensable.client.view.batch;
 import com.google.gwt.cell.client.CheckboxCell;
 import com.google.gwt.cell.client.EditTextCell;
 import com.google.gwt.cell.client.FieldUpdater;
+import com.google.gwt.cell.client.NumberCell;
 import com.google.gwt.cell.client.SafeHtmlCell;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.safehtml.shared.OnlyToBeUsedInGeneratedCodeStringBlessedAsSafeHtml;
@@ -28,13 +29,8 @@ public class BatchesViewImpl extends Composite implements BatchesView {
 
   interface Binder extends UiBinder<Widget, BatchesViewImpl>{}
 
-  private static interface GetValue<C> {
-	    C getValue(Batch contact);
-	  }
-
-  
   private BatchesPresenter presenter;
-  
+
   @UiField(provided = true) CellTable<Batch> reports;
   /*@UiField(provided = true)*/ SimplePager pager;
 
@@ -52,15 +48,15 @@ public class BatchesViewImpl extends Composite implements BatchesView {
   public void setPresenter(BatchesPresenter presenter) {
     this.presenter = presenter;
     final MultiSelectionModel<Batch> selectionModel
-    = new MultiSelectionModel<Batch>(presenter.getKeyProvider());
-reports.setSelectionModel(selectionModel);
-initTableColumns(selectionModel);
-presenter.addReportsDisplay(reports);
+        = new MultiSelectionModel<Batch>(presenter.getKeyProvider());
+    reports.setSelectionModel(selectionModel);
+    initTableColumns(selectionModel);
+    presenter.addReportsDisplay(reports);
   }
-  
+
 
   private volatile int numCols = 0; // TODO(dpurpura): get this from table somehow
-  
+
   /**
    * Add the columns to the table.
    */
@@ -88,47 +84,39 @@ presenter.addReportsDisplay(reports);
     });
     reports.addColumn(checkColumn, SafeHtmlUtils.fromSafeConstant("<br>"));
 
-   
- // Name
-    Column<Batch, SafeHtml> idColumn
-        = new Column<Batch, SafeHtml>(new SafeHtmlCell()) {
+
+    // Id
+    Column<Batch, Number> idColumn
+        = new Column<Batch, Number>(new NumberCell()) {
       @Override
-      public SafeHtml getValue(Batch report) {
-        return new OnlyToBeUsedInGeneratedCodeStringBlessedAsSafeHtml("<a href=\"#batches:id=12345\">"+report.getName()+"</a>");
+      public Number getValue(Batch report) {
+        return report.getId();
       }
     };
-    /*idColumn.setFieldUpdater(new FieldUpdater<Batch, String>() {
-
-      @Override
-      public void update(int index, Batch report, String value) {
-        report.setName(value);
-        presenter.refreshDisplays();
-      }
-
-    });*/
     reports.addColumn(idColumn, "Batch Id");
 
 
     // Name
-    Column<Batch, String> nameColumn
-        = new Column<Batch, String>(new EditTextCell()) {
+    Column<Batch, SafeHtml> nameColumn
+        = new Column<Batch, SafeHtml>(new SafeHtmlCell()) {
       @Override
-      public String getValue(Batch report) {
-        return report.getName();
+      public SafeHtml getValue(Batch report) {
+        return new OnlyToBeUsedInGeneratedCodeStringBlessedAsSafeHtml(
+            "<a href=\"#batches:id=12345\">"+report.getName()+"</a>");
       }
     };
-    nameColumn.setFieldUpdater(new FieldUpdater<Batch, String>() {
-
-      @Override
-      public void update(int index, Batch report, String value) {
-        report.setName(value);
-        presenter.refreshDisplays();
-      }
-
-    });
+//    nameColumn.setFieldUpdater(new FieldUpdater<Batch, SafeHtml>() {
+//
+//      @Override
+//      public void update(int index, Batch report, SafeHtml value) {
+//        report.setName(value.);
+//        presenter.refreshDisplays();
+//      }
+//
+//    });
     reports.addColumn(nameColumn, "Name");
-    
- // Name
+
+    // Name
     Column<Batch, String> statusColumn
         = new Column<Batch, String>(new EditTextCell()) {
       @Override
@@ -146,13 +134,12 @@ presenter.addReportsDisplay(reports);
 
     });
     reports.addColumn(statusColumn, "Status");
-    
+
     numCols = 4;
   }
 
 @Override
 public CellTable<Batch> getReportsTable() {
-	// TODO Auto-generated method stub
 	return reports;
 }
 

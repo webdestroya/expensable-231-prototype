@@ -1,20 +1,23 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+  xmlns:c="urn:import:com.google.gwt.user.cellview.client"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		/* Add CSS here. See the GWT docs on UI Binder for more details */
 		.important {
 			font-weight: normal;
 		}
+		.delete {
+			margin-left: 3em;
+		}
 	</ui:style>
 	<g:HTMLPanel>
 	  <h1>Batches</h1>
-	  <input type="button" value="New" />
-	  <input type="button" value="Open" />
-	  <input type="button" value="Export" />
+	  <g:Button>New</g:Button>
+	  <g:Button>Open</g:Button>
+	  <g:Button>Export</g:Button>
 	  
-	  <input type="button" value="Delete" />
+	  <g:Button addStyleNames="{style.delete}">Delete</g:Button>
 	  <c:CellTable ui:field="reports" pageSize="15"/>
 		
 	</g:HTMLPanel>

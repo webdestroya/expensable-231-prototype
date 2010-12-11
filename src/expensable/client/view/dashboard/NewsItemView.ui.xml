@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	  .contentContainer {
+ 	    margin-left: 40px;
+	  }
+		.hide, .action {
+			float: right;
+		}
+		.displayDate {
+		}
+		.icon {
+			border: 1px solid #888;
+			heigh: 32px;
+			width: 32px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+	 <g:Button addStyleNames="{style.hide}">Hide</g:Button>
+	 <img ui:field="icon"/>
+	 <div class="{style.contentContainer}">
+		 <h2 ui:field="name"/>
+		 <span ui:field="date" class="{style.displayDate}"/>
+		 <select class="{style.action}">
+		   <option>View</option>
+		   <option>Add to report</option>
+		   <option>New Report</option>
+		 </select>
+	 </div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

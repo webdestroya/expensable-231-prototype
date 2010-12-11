@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class ExpenseReport {
+import com.google.gwt.view.client.ProvidesKey;
+
+public class ExpenseReport implements NewsItem {
 
   private final List<ExpenseItem> expenseItems;
 
@@ -13,9 +15,11 @@ public class ExpenseReport {
   private Integer amount;
   private ExpenseType type;
   private Date createdDate;
+  private Date lastModified;
 
   public ExpenseReport() {
     expenseItems = new ArrayList<ExpenseItem>();
+    lastModified = new Date();
   }
 
   /**
@@ -35,6 +39,7 @@ public class ExpenseReport {
   /**
    * @return the name
    */
+  @Override
   public String getName() {
     return name;
   }
@@ -88,11 +93,28 @@ public class ExpenseReport {
     this.createdDate = createdDate;
   }
 
+  @Override
+  public Date getLastModified() {
+    return lastModified;
+  }
+
   /**
    * @return the expenseItems
    */
   public List<ExpenseItem> getExpenseItems() {
     return expenseItems;
   }
+
+  /**
+   * The key provider that provides the unique ID of a report.
+   */
+  public static final ProvidesKey<ExpenseReport> KEY_PROVIDER = new ProvidesKey<ExpenseReport>() {
+
+    @Override
+    public Object getKey(ExpenseReport report) {
+      return (report == null) ? null : report.getId();
+    }
+
+  };
 
 }
