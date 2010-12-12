@@ -17,7 +17,7 @@
 			width: 400px;
 		}
 	</ui:style>
-	<g:ScrollPanel>
+	<g:ScrollPanel ui:field="scrollPanel">
 		<g:HTMLPanel>
 		  <h1>Dashboard</h1>
 			<g:SimplePanel ui:field="timelinePanel" addStyleNames="{style.timelinePanel}"/>

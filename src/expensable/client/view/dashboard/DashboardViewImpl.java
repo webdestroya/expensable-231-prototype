@@ -8,7 +8,8 @@ import java.util.List;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.ResizeComposite;
+import com.google.gwt.user.client.ui.ScrollPanel;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.visualization.client.AbstractDataTable;
@@ -25,7 +26,7 @@ import expensable.shared.models.NewsItem;
 /**
  * @author dpurpura
  */
-public class DashboardViewImpl extends Composite implements DashboardView {
+public class DashboardViewImpl extends ResizeComposite implements DashboardView {
 
   private static Binder binder = GWT.create(Binder.class);
 
@@ -33,6 +34,7 @@ public class DashboardViewImpl extends Composite implements DashboardView {
 
   private DashboardPresenter presenter;
 
+  @UiField ScrollPanel scrollPanel;
   @UiField SimplePanel timelinePanel;
   @UiField NewsFeedView newsfeed;
 
