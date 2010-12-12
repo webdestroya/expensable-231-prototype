@@ -8,9 +8,12 @@ import com.google.gwt.cell.client.DatePickerCell;
 import com.google.gwt.cell.client.EditTextCell;
 import com.google.gwt.cell.client.FieldUpdater;
 import com.google.gwt.cell.client.NumberCell;
+import com.google.gwt.cell.client.SafeHtmlCell;
 import com.google.gwt.cell.client.TextCell;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.safehtml.shared.OnlyToBeUsedInGeneratedCodeStringBlessedAsSafeHtml;
+import com.google.gwt.safehtml.shared.SafeHtml;
 import com.google.gwt.safehtml.shared.SafeHtmlUtils;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -30,6 +33,7 @@ import expensable.client.activity.expensereport.ShowExpenseReportsActivity;
 import expensable.client.place.CreateExpenseReportPlace;
 import expensable.client.place.ExpenseReportsPlace;
 import expensable.client.view.widget.Button;
+import expensable.shared.models.Batch;
 import expensable.shared.models.ExpenseReport;
 
 public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsView {
@@ -147,13 +151,15 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
     reports.addColumn(nameColumn, "Employee Name");    
     
     // ID
-    Column<ExpenseReport, String> idColumn
-        = new Column<ExpenseReport, String>(new TextCell()) {
-      @Override
-      public String getValue(ExpenseReport report) {
-        return report.getId();
-      }
-    };
+    
+    Column<ExpenseReport, SafeHtml> idColumn
+    = new Column<ExpenseReport, SafeHtml>(new SafeHtmlCell()) {
+  @Override
+  public SafeHtml getValue(ExpenseReport report) {
+    return new OnlyToBeUsedInGeneratedCodeStringBlessedAsSafeHtml(
+        "<a href=\"#reports:rid=1\">"+report.getId()+"</a>");
+  }
+};
     reports.addColumn(idColumn, "Tracking Id");
     
     // Attachment

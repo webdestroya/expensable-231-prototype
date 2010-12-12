@@ -1,16 +1,20 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+  xmlns:e="urn:import:expensable.client.view.widget"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
-		/* Add CSS here. See the GWT docs on UI Binder for more details */
-		.important {
-			font-weight: bold;
+		.quickApprove {
+			float: right; 
+			margin: 2em;
+			padding: 1em;
 		}
 	</ui:style>
 	<g:HTMLPanel>
-	  <h1>ExpenseReport</h1>
-		<p>This is the ExpenseReport page</p>
-		<p>go to a <a href="#reports:rid=1&amp;iid=1">sample expense item</a></p>
-		<g:FlowPanel ui:field="panel"/>
+		<h1>Trip to Alaska</h1>
+		<c:CellTable ui:field="reports" pageSize="15"/>
+		<c:SimplePager ui:field="pager"/>
+		<e:Button>Create New Expense Report</e:Button>
+		<e:Button styleName="{style.quickApprove}">Quick Approve</e:Button>
 	</g:HTMLPanel>
-</ui:UiBinder> 
+</ui:UiBinder>
