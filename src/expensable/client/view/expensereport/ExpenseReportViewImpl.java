@@ -8,6 +8,10 @@ import com.google.gwt.cell.client.FieldUpdater;
 import com.google.gwt.cell.client.NumberCell;
 import com.google.gwt.cell.client.TextCell;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.i18n.client.NumberFormat;
+import com.google.gwt.safehtml.shared.OnlyToBeUsedInGeneratedCodeStringBlessedAsSafeHtml;
+import com.google.gwt.safehtml.shared.SafeHtml;
+
 import com.google.gwt.safehtml.shared.SafeHtmlUtils;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -100,7 +104,7 @@ public class ExpenseReportViewImpl extends Composite implements ExpenseReportVie
 
     // Amount
     Column<ExpenseItem, Number> amountColumn
-        = new Column<ExpenseItem, Number>(new NumberCell()) {
+        = new Column<ExpenseItem, Number>(new NumberCell(NumberFormat.getCurrencyFormat())) {
       @Override
       public Number getValue(ExpenseItem report) {
         return report.getAmount();
@@ -127,8 +131,8 @@ public class ExpenseReportViewImpl extends Composite implements ExpenseReportVie
         return report.getMerchant();
       }
     };
-    reports.addColumn(attachmentColumn, "Location");
 
+    reports.addColumn(attachmentColumn, "Merchant");
     numCols = 6;
   }
 

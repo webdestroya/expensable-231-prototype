@@ -6,16 +6,24 @@
 	<ui:style>
 		.quickApprove {
 			float: right; 
-			margin: 2em;
-			padding: 1em;
+			
 		}
 	</ui:style>
 	<g:HTMLPanel>
 		<h1>Expense Reports</h1>
 		<g:TabBar ui:field="reportType"/>
-		<e:Button ui:field="button">Create New Expense Report</e:Button>
+		<div style="border:1px solid black;width:800px;">
 		<c:CellTable ui:field="reports" pageSize="15"/>
 		<c:SimplePager ui:field="pager"/>
+		
+		
+		</div>
+		
+		<div style="margin-top:25px;width:800px;">
 		<e:Button styleName="{style.quickApprove}" ui:field="quickApproveButton">Quick Approve</e:Button>
+		<e:Button ui:field="button">Create New Expense Report</e:Button>
+		
+		
+		</div>
 	</g:HTMLPanel>
 </ui:UiBinder>

@@ -803,7 +803,9 @@ a, a:visited, a:hover {
 .gwt-TabBar .gwt-TabBarRest {
 }
 .gwt-TabBar .gwt-TabBarItem {
-  margin-left: 6px;
+  margin-left: 0;
+  border-right:1px solid black;
+  border-top:1px solid black;
   padding: 3px 6px 3px 6px;
   cursor: pointer;
   cursor: hand;
@@ -812,9 +814,12 @@ a, a:visited, a:hover {
   text-align: center;
   background: #d0e4f6;
 }
+
 .gwt-TabBar .gwt-TabBarItem-selected {
   cursor: default;
   background: #92c1f0;
+  margin-bottom:-1px;
+  
 } 
 .gwt-TabBar .gwt-TabBarItem-disabled {
   cursor: default;

@@ -6,6 +6,7 @@ import com.google.gwt.activity.shared.AbstractActivity;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.user.cellview.client.CellTable;
+import com.google.gwt.user.client.Random;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.gwt.view.client.ListDataProvider;
 import com.google.gwt.view.client.ProvidesKey;
@@ -77,8 +78,10 @@ public class ShowExpenseReportActivity extends AbstractActivity implements Expen
 
   @SuppressWarnings("deprecation") // Using deprecated date for quick stub
   public static void stubReports(List<? super ExpenseItem> reports) {
-    reports.add(new ExpenseItem(123123123,1231,"Alaska","Chevron","Gas"));
-    reports.add(new ExpenseItem(237987,9861,"Alaska","Dennys","Breakfast"));
+	int id=12398123;
+    reports.add(new ExpenseItem(id++,1231,"Alaska","Chevron","Gas"));
+    reports.add(new ExpenseItem(id++,9861,"Alaska","Dennys","Breakfast"));
+    reports.add(new ExpenseItem(id++,123861,"Alaska","Hertz","Auto"));
   }
 
 
