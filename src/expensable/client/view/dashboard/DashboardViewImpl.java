@@ -77,7 +77,6 @@ public class DashboardViewImpl extends Composite implements DashboardView {
     for (NewsItem item : items) {
       data.setValue(row, 0, item.getLastModified());
       runningTotal += item.getAmount();
-      System.out.println(runningTotal);
       data.setValue(row, 1, item.getAmount());
       data.setValue(row, 2, item.getName());
       row++;
