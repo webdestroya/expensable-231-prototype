@@ -56,11 +56,11 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
     initWidget(uiBinder.createAndBindUi(this));
 
     //Initialize the Tab Bar with all required tabs
-    reportType.addTab("All");
-    reportType.addTab("Unsubmitted");
-    reportType.addTab("Pending Approval");
-    reportType.addTab("Approved");
-    reportType.addTab("Rejected");
+    reportType.addTab("All(3)");
+    reportType.addTab("Unsubmitted(1)");
+    reportType.addTab("Pending Approval(1)");
+    reportType.addTab("Approved(1)");
+    reportType.addTab("Rejected(0)");
 
   }
 
