@@ -20,6 +20,15 @@ private Date purchaseDate;
   public ExpenseItem() {
 
   }
+  
+  public ExpenseItem(int id, int amount, String location, String merchant, String description) {
+	  this.id = id;
+	  this.amount = amount;
+	  this.location = location;
+	  this.merchant = merchant;
+	  this.description = description;
+	  this.purchaseDate = new Date();
+  }
 
   public int getId() {
 		return id;

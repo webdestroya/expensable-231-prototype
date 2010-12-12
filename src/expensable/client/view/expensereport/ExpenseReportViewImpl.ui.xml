@@ -13,8 +13,20 @@
 	<g:HTMLPanel>
 		<h1>Trip to Alaska</h1>
 		<c:CellTable ui:field="reports" pageSize="15"/>
-		<c:SimplePager ui:field="pager"/>
-		<e:Button>Create New Expense Report</e:Button>
+		
+		<table cellspacing="0" cellpadding="0" border="0">
+		<tr>
+		<td>with selected:
+		<br/>
+		<e:Button>Attach Receipt</e:Button>
+		<e:Button>Delete</e:Button>
+		</td>
+		<td align="right">
+		<e:Button>Submit Report</e:Button>
+		</td>
+		</tr>
+		</table>
+		
 		<e:Button styleName="{style.quickApprove}">Quick Approve</e:Button>
 	</g:HTMLPanel>
 </ui:UiBinder>

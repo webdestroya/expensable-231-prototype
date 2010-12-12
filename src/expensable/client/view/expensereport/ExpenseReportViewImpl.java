@@ -9,13 +9,11 @@ import com.google.gwt.cell.client.NumberCell;
 import com.google.gwt.cell.client.SafeHtmlCell;
 import com.google.gwt.cell.client.TextCell;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.safehtml.shared.OnlyToBeUsedInGeneratedCodeStringBlessedAsSafeHtml;
 import com.google.gwt.safehtml.shared.SafeHtml;
 import com.google.gwt.safehtml.shared.SafeHtmlUtils;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.SimplePager;
@@ -26,9 +24,7 @@ import com.google.gwt.view.client.MultiSelectionModel;
 import com.google.gwt.view.client.SelectionModel;
 
 import expensable.client.activity.expensereport.ShowExpenseReportActivity;
-import expensable.client.place.CreateExpenseReportPlace;
 import expensable.shared.models.ExpenseItem;
-import expensable.shared.models.ExpenseReport;
 
 public class ExpenseReportViewImpl extends Composite implements ExpenseReportView {
 
@@ -38,17 +34,13 @@ public class ExpenseReportViewImpl extends Composite implements ExpenseReportVie
   }
  
   @UiField(provided = true) CellTable<ExpenseItem> reports;
-  @UiField(provided = true) SimplePager pager;
+  
 
   private ExpenseReportPresenter presenter;
 
   public ExpenseReportViewImpl() {
     reports = new CellTable<ExpenseItem>(ShowExpenseReportActivity.KEY_PROVIDER);
 
-    // Create a Pager to control the table.
-    SimplePager.Resources pagerResources = GWT.create(SimplePager.Resources.class);
-    pager = new SimplePager(TextLocation.CENTER, pagerResources, false, 0, true);
-    pager.setDisplay(reports);
     
     initWidget(uiBinder.createAndBindUi(this));
 
@@ -68,13 +60,8 @@ public class ExpenseReportViewImpl extends Composite implements ExpenseReportVie
   }
 
   @Override
-  public CellTable<ExpenseReport> getReportsTable() {
+  public CellTable<ExpenseItem> getReportsTable() {
     return reports;
-  }
-
-  @UiHandler("quickApproveButton")
-  void onClick(ClickEvent e) {
-	  presenter.goTo(new CreateExpenseReportPlace(""));
   }
 
   private volatile int numCols = 0; // TODO(dpurpura): get this from table somehow
@@ -82,7 +69,7 @@ public class ExpenseReportViewImpl extends Composite implements ExpenseReportVie
   /**
    * Add the columns to the table.
    */
-  private void initTableColumns(final SelectionModel<? super ExpenseReport> selectionModel) {
+  private void initTableColumns(final SelectionModel<? super ExpenseItem> selectionModel) {
     while (numCols-- > 0) {
       reports.removeColumn(0);
     }
@@ -90,16 +77,16 @@ public class ExpenseReportViewImpl extends Composite implements ExpenseReportVie
     // Checkbox column. This table will uses a checkbox column for selection.
     // Alternatively, you can call reports.setSelectionEnabled(true) to enable
     // mouse selection.
-    Column<ExpenseReport, Boolean> checkColumn
-        = new Column<ExpenseReport, Boolean>(new CheckboxCell(true)) {
+    Column<ExpenseItem, Boolean> checkColumn
+        = new Column<ExpenseItem, Boolean>(new CheckboxCell(true)) {
       @Override
-      public Boolean getValue(ExpenseReport object) {
+      public Boolean getValue(ExpenseItem object) {
         return selectionModel.isSelected(object);
       }
     };
-    checkColumn.setFieldUpdater(new FieldUpdater<ExpenseReport, Boolean>() {
+    checkColumn.setFieldUpdater(new FieldUpdater<ExpenseItem, Boolean>() {
       @Override
-      public void update(int index, ExpenseReport object, Boolean value) {
+      public void update(int index, ExpenseItem object, Boolean value) {
         // Called when the user clicks on a checkbox.
         selectionModel.setSelected(object, value);
       }
@@ -107,56 +94,45 @@ public class ExpenseReportViewImpl extends Composite implements ExpenseReportVie
     reports.addColumn(checkColumn, SafeHtmlUtils.fromSafeConstant("<br>"));
 
     // Created date
-    Column<ExpenseReport, Date> createdDateColumn
-        = new Column<ExpenseReport, Date>(new DateCell()) {
+    Column<ExpenseItem, Date> createdDateColumn
+        = new Column<ExpenseItem, Date>(new DateCell()) {
       @Override
-      public Date getValue(ExpenseReport report) {
-        return report.getCreatedDate();
+      public Date getValue(ExpenseItem report) {
+        return report.getPurchaseDate();
       }
     };
-    reports.addColumn(createdDateColumn, "Created Date");
+    reports.addColumn(createdDateColumn, "Date Entered");
 
     // Amount
-    Column<ExpenseReport, Number> amountColumn
-        = new Column<ExpenseReport, Number>(new NumberCell()) {
+    Column<ExpenseItem, Number> amountColumn
+        = new Column<ExpenseItem, Number>(new NumberCell()) {
       @Override
-      public Number getValue(ExpenseReport report) {
+      public Number getValue(ExpenseItem report) {
         return report.getAmount();
       }
     };
     reports.addColumn(amountColumn, "Amount");
 
     // Employee Name
-    Column<ExpenseReport, String> nameColumn
-        = new Column<ExpenseReport, String>(new TextCell()) {
+    Column<ExpenseItem, String> nameColumn
+        = new Column<ExpenseItem, String>(new TextCell()) {
       @Override
-      public String getValue(ExpenseReport report) {
+      public String getValue(ExpenseItem report) {
         return report.getName();
       }
     };
-    reports.addColumn(nameColumn, "Employee Name");    
+    reports.addColumn(nameColumn, "Type");    
     
-    // ID
-    
-    Column<ExpenseReport, SafeHtml> idColumn
-    = new Column<ExpenseReport, SafeHtml>(new SafeHtmlCell()) {
-  @Override
-  public SafeHtml getValue(ExpenseReport report) {
-    return new OnlyToBeUsedInGeneratedCodeStringBlessedAsSafeHtml(
-        "<a href=\"#reports:rid=1\">"+report.getId()+"</a>");
-  }
-};
-    reports.addColumn(idColumn, "Tracking Id");
     
     // Attachment
-    Column<ExpenseReport, String> attachmentColumn
-        = new Column<ExpenseReport, String>(new TextCell()) {
+    Column<ExpenseItem, String> attachmentColumn
+        = new Column<ExpenseItem, String>(new TextCell()) {
       @Override
-      public String getValue(ExpenseReport report) {
-        return report.getAttachment();
+      public String getValue(ExpenseItem report) {
+        return report.getMerchant();
       }
     };
-    reports.addColumn(attachmentColumn, "Attachment");
+    reports.addColumn(attachmentColumn, "Location");
     
     numCols = 6;
   }
