@@ -31,8 +31,10 @@
 	  <td align='right'> Year </td>
 	  <td> <g:ListBox styleName="{style.listBox}" ui:field="year"/></td>
 	</tr>
+	<tr>
+	<td /><td><e:Button styleName="{style.displayButton}" ui:field="display">Display</e:Button></td>
+	</tr>
 	</Table>  
-	  <e:Button styleName="{style.displayButton}" ui:field="display">Display</e:Button>
  	  <c:CellTable ui:field="reports" pageSize="15"/>
 	  <c:SimplePager styleName="{style.simplePager}" ui:field="pager"/>
 	</g:HTMLPanel>
