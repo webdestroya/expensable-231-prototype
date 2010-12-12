@@ -1,14 +1,28 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+  	xmlns:e="urn:import:expensable.client.view.widget">
 	<ui:style>
-		/* Add CSS here. See the GWT docs on UI Binder for more details */
-		.important {
-			font-weight: bold;
+		.displayButton {
+			margin: .5em;
+			padding: .25em;
+		}
+		.listBox {
+			margin: .25em;
+			padding: .125em;
+		}
+		.simplePager {
+			margin: 0 auto;
 		}
 	</ui:style>
 	<g:HTMLPanel>
 	  <h1>Spot Audit</h1>
-		<p>This is the Spot Audit page</p>
+	  <p> Select Status <g:ListBox styleName="{style.listBox}" ui:field="statusType"/></p>
+	  <p> Select Employee <g:ListBox styleName="{style.listBox}" ui:field="employeeName"/></p>
+	  <p> Year <g:ListBox styleName="{style.listBox}" ui:field="year"/></p>
+	  <e:Button styleName="{style.displayButton}" ui:field="display">Display</e:Button>
+ 	  <c:CellTable ui:field="reports" pageSize="15"/>
+	  <c:SimplePager styleName="{style.simplePager}" ui:field="pager"/>
 	</g:HTMLPanel>
 </ui:UiBinder> 
