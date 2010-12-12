@@ -4,18 +4,17 @@
   xmlns:e="urn:import:expensable.client.view.widget"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
-		.important {
-			font-weight: bold;
+		.quickApprove {
+			float: right; 
 			margin: 2em;
 			padding: 1em;
 		}
 	</ui:style>
 	<g:HTMLPanel>
 		<h1>Expense Reports</h1>
-		<p>
-		  go to: <a href="#reports:rid=1">sample report</a>
-		</p>
-		<e:Button styleName="{style.important}" ui:field="button">Example Button</e:Button>
+		<g:TabBar ui:field="reportType"/>
 		<c:CellTable ui:field="reports" pageSize="15"/>
+		<c:SimplePager ui:field="pager"/>
+		<e:Button styleName="{style.quickApprove}" ui:field="quickApproveButton">Quick Approve</e:Button>
 	</g:HTMLPanel>
 </ui:UiBinder>

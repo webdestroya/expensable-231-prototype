@@ -88,6 +88,8 @@ public class ShowExpenseReportsActivity extends AbstractActivity
     report.setAmount(5623);
     report.setCreatedDate(new Date(110, 4, 23));
     report.setType(new ExpenseType("Travel"));
+    report.setId("BCR25723272");
+    report.setAttachment("Yes");
     reports.add(report);
 
     report = new ExpenseReport();
@@ -96,6 +98,8 @@ public class ShowExpenseReportsActivity extends AbstractActivity
     report.setAmount(375);
     report.setCreatedDate(new Date(110, 10, 1));
     report.setType(new ExpenseType("Dining"));
+    report.setId("BCS56792341");
+    report.setAttachment("Yes");
     reports.add(report);
 
     report = new ExpenseReport();
@@ -104,6 +108,8 @@ public class ShowExpenseReportsActivity extends AbstractActivity
     report.setAmount(15);
     report.setCreatedDate(new Date(110, 10, 15));
     report.setType(new ExpenseType("Office Supplies"));
+    report.setId("SDF45238129");
+    report.setAttachment("No");
     reports.add(report);
   }
 
