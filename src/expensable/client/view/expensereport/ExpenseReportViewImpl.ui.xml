@@ -9,6 +9,9 @@
 		}
 	</ui:style>
 	<g:HTMLPanel>
+		<a href="#reports:">&lt; return to expense reports</a>
+
+		
 		<h1>Trip to Alaska</h1>
 		<div style="width:600px;">
 		<c:CellTable ui:field="reports" pageSize="15" addStyleNames="{style.itemtable}" />
