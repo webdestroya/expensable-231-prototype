@@ -4,12 +4,10 @@
 	<ui:style>
 	  .panel {
 	  	display: inline-block;
+	  	margin: 0.5em 0;
 	  }
-		.container {
-		  border: 1px solid black;
-		}
 	</ui:style>
 	<g:HTMLPanel addStyleNames="{style.panel}">
-		<g:Button ui:field="container" addStyleNames="{style.container}"/>
+	 	<g:Anchor ui:field="button" addStyleNames="button"/>
 	</g:HTMLPanel>
 </ui:UiBinder> 

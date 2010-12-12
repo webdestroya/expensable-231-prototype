@@ -4,17 +4,19 @@
   xmlns:e="urn:import:expensable.client.view.widget"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
-		.quickApprove {
-			float: right; 
-			margin: 2em;
-			padding: 1em;
+		.itemtable {
+			width:100%;
 		}
 	</ui:style>
 	<g:HTMLPanel>
-		<h1>Trip to Alaska</h1>
-		<c:CellTable ui:field="reports" pageSize="15"/>
+		<a href="#reports:">&lt; return to expense reports</a>
+
 		
-		<table cellspacing="0" cellpadding="0" border="0">
+		<h1>Trip to Alaska</h1>
+		<div style="width:600px;">
+		<c:CellTable ui:field="reports" pageSize="15" addStyleNames="{style.itemtable}" />
+		
+		<table cellspacing="0" cellpadding="0" border="0" width="100%">
 		<tr>
 		<td>with selected:
 		<br/>
@@ -22,11 +24,12 @@
 		<e:Button>Delete</e:Button>
 		</td>
 		<td align="right">
+		&nbsp;<br/>
 		<e:Button>Submit Report</e:Button>
 		</td>
 		</tr>
 		</table>
 		
-		<e:Button styleName="{style.quickApprove}">Quick Approve</e:Button>
+		</div>
 	</g:HTMLPanel>
 </ui:UiBinder>

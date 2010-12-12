@@ -4,8 +4,6 @@ import java.util.Date;
 
 import com.google.gwt.cell.client.CheckboxCell;
 import com.google.gwt.cell.client.DateCell;
-import com.google.gwt.cell.client.DatePickerCell;
-import com.google.gwt.cell.client.EditTextCell;
 import com.google.gwt.cell.client.FieldUpdater;
 import com.google.gwt.cell.client.NumberCell;
 import com.google.gwt.cell.client.SafeHtmlCell;
@@ -23,7 +21,6 @@ import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.SimplePager;
 import com.google.gwt.user.cellview.client.SimplePager.TextLocation;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TabBar;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.MultiSelectionModel;
@@ -32,7 +29,6 @@ import com.google.gwt.view.client.SelectionModel;
 import expensable.client.activity.expensereport.ShowExpenseReportsActivity;
 import expensable.client.place.CreateExpenseReportPlace;
 import expensable.client.view.widget.Button;
-import expensable.shared.models.Batch;
 import expensable.shared.models.ExpenseReport;
 
 public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsView {
@@ -56,7 +52,7 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
     SimplePager.Resources pagerResources = GWT.create(SimplePager.Resources.class);
     pager = new SimplePager(TextLocation.CENTER, pagerResources, false, 0, true);
     pager.setDisplay(reports);
-    
+
     initWidget(uiBinder.createAndBindUi(this));
 
     //Initialize the Tab Bar with all required tabs
@@ -65,7 +61,7 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
     reportType.addTab("Pending Approval");
     reportType.addTab("Approved");
     reportType.addTab("Rejected");
-    
+
   }
 
   @Override
@@ -147,10 +143,10 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
         return report.getName();
       }
     };
-    reports.addColumn(nameColumn, "Employee Name");    
-    
+    reports.addColumn(nameColumn, "Employee Name");
+
     // ID
-    
+
     Column<ExpenseReport, SafeHtml> idColumn
     = new Column<ExpenseReport, SafeHtml>(new SafeHtmlCell()) {
   @Override
@@ -160,7 +156,7 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
   }
 };
     reports.addColumn(idColumn, "Tracking Id");
-    
+
     // Attachment
     Column<ExpenseReport, String> attachmentColumn
         = new Column<ExpenseReport, String>(new TextCell()) {
@@ -170,7 +166,7 @@ public class ExpenseReportsViewImpl extends Composite implements ExpenseReportsV
       }
     };
     reports.addColumn(attachmentColumn, "Attachment");
-    
+
     numCols = 6;
   }
 

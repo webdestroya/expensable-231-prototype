@@ -8,8 +8,8 @@ import com.google.gwt.dom.client.UListElement;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.IsWidget;
-import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
 
 public class MainLayoutImpl extends Composite implements MainLayout {
@@ -25,7 +25,7 @@ public class MainLayoutImpl extends Composite implements MainLayout {
   @UiField LIElement reports;
   @UiField LIElement spotAudit;
   @UiField LIElement batches;
-  @UiField SimplePanel content;
+  @UiField HasWidgets content;
 
   public MainLayoutImpl() {
     initWidget(uiBinder.createAndBindUi(this));
@@ -38,8 +38,9 @@ public class MainLayoutImpl extends Composite implements MainLayout {
 
   @Override
   public void setWidget(IsWidget w) {
+    if (w == null) return;
     content.clear();
-    content.add(w);
+    content.add(w.asWidget());
   }
 
   @Override
@@ -68,7 +69,7 @@ public class MainLayoutImpl extends Composite implements MainLayout {
     li.addClassName(style.selected());
   }
 
-  public SimplePanel getContent() {
+  public HasWidgets getContent() {
     return content;
   }
 
