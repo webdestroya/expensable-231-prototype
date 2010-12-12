@@ -9,12 +9,14 @@ import expensable.client.ClientFactory;
 import expensable.client.activity.batch.ShowBatchActivity;
 import expensable.client.activity.batch.ShowBatchesActivity;
 import expensable.client.activity.dashboard.ShowDashboardActivity;
+import expensable.client.activity.expensereport.CreateExpenseItemActivity;
 import expensable.client.activity.expensereport.CreateExpenseReportActivity;
 import expensable.client.activity.expensereport.ShowExpenseItemActivity;
 import expensable.client.activity.expensereport.ShowExpenseReportActivity;
 import expensable.client.activity.expensereport.ShowExpenseReportsActivity;
 import expensable.client.activity.spotaudit.ShowSpotAuditActivity;
 import expensable.client.place.BatchesPlace;
+import expensable.client.place.CreateExpenseItemPlace;
 import expensable.client.place.CreateExpenseReportPlace;
 import expensable.client.place.DashboardPlace;
 import expensable.client.place.ExpenseReportsPlace;
@@ -59,6 +61,8 @@ public class AppActivityMapper implements ActivityMapper {
       }
     } else if (place instanceof CreateExpenseReportPlace) {
     	return new CreateExpenseReportActivity((CreateExpenseReportPlace) place, clientFactory);
+    } else if (place instanceof CreateExpenseItemPlace) {
+      return new CreateExpenseItemActivity((CreateExpenseItemPlace) place, clientFactory);
     } else if (place instanceof SpotAuditPlace) {
       System.out.println("we have a sa");
 

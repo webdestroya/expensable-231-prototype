@@ -1,5 +1,6 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:e="urn:import:expensable.client.view.widget"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		/* Add CSS here. See the GWT docs on UI Binder for more details */
@@ -15,5 +16,6 @@
 			<td><input type="text" size="40" /></td>
 		</tr>
 		</table>
+		<e:Button ui:field="createItem">Add Expense Item</e:Button>
 	</g:HTMLPanel>
 </ui:UiBinder> 

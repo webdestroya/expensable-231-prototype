@@ -10,6 +10,7 @@ import expensable.client.view.dashboard.DashboardView;
 import expensable.client.view.expensereport.CreateExpenseReportView;
 import expensable.client.view.expensereport.ExpenseReportView;
 import expensable.client.view.expensereport.ExpenseReportsView;
+import expensable.client.view.expensereport.item.CreateExpenseItemView;
 import expensable.client.view.expensereport.item.ExpenseItemView;
 import expensable.client.view.spotaudit.SpotAuditView;
 
@@ -29,4 +30,5 @@ public interface ClientFactory {
   ExpenseReportsView getExpenseReportsView();
   SpotAuditView getSpotAuditView();
   CreateExpenseReportView getCreateExpenseReportView();
+  CreateExpenseItemView getCreateExpenseItemView();
 }

@@ -18,6 +18,8 @@ import expensable.client.view.expensereport.ExpenseReportView;
 import expensable.client.view.expensereport.ExpenseReportViewImpl;
 import expensable.client.view.expensereport.ExpenseReportsView;
 import expensable.client.view.expensereport.ExpenseReportsViewImpl;
+import expensable.client.view.expensereport.item.CreateExpenseItemView;
+import expensable.client.view.expensereport.item.CreateItemViewImpl;
 import expensable.client.view.expensereport.item.ExpenseItemView;
 import expensable.client.view.expensereport.item.ExpenseItemViewImpl;
 import expensable.client.view.spotaudit.SpotAuditView;
@@ -45,6 +47,7 @@ public class ClientFactoryImpl implements ClientFactory {
   private static ExpenseReportsView expenseReportsView;
   private static SpotAuditView spotAuditView;
   private static CreateExpenseReportView createExpenseReportView;
+  private static CreateExpenseItemView createExpenseItemView;
 
   @Override
   public EventBus getEventBus() {
@@ -118,13 +121,21 @@ public class ClientFactoryImpl implements ClientFactory {
     }
     return spotAuditView;
   }
-  
+
   @Override
   public CreateExpenseReportView getCreateExpenseReportView() {
     if (createExpenseReportView == null) {
     	createExpenseReportView = new CreateExpenseReportViewImpl();
     }
     return createExpenseReportView;
+  }
+
+  @Override
+  public CreateExpenseItemView getCreateExpenseItemView() {
+    if (createExpenseItemView == null) {
+      createExpenseItemView = new CreateItemViewImpl();
+    }
+    return createExpenseItemView;
   }
 
 }
