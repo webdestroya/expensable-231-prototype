@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.google.common.collect.Lists;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ChangeEvent;
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
@@ -12,6 +13,11 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
+
+import expensable.client.place.CreateExpenseItemPlace;
+import expensable.client.place.ExpenseReportsPlace;
+import expensable.client.view.expensereport.CreateExpenseReportView.CreateExpenseReportPresenter;
+import expensable.client.view.widget.Button;
 
 public class CreateItemViewImpl extends Composite implements CreateExpenseItemView {
 
@@ -50,6 +56,20 @@ public class CreateItemViewImpl extends Composite implements CreateExpenseItemVi
       panel.add(itemPanels.get(selectedIndex).asWidget());
       currentPanel = selectedIndex;
     }
+  }
+  
+  @UiField Button createItem;
+
+  @UiHandler("createItem")
+  public void onCreateItemButtonClick(ClickEvent e) {
+    presenter.goTo(new ExpenseReportsPlace(""));
+  }
+  
+  @UiField Button createItem2;
+
+  @UiHandler("createItem2")
+  public void onCreate2ItemButtonClick(ClickEvent e) {
+    presenter.goTo(new ExpenseReportsPlace("1"));
   }
 
 }

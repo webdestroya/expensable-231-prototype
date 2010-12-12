@@ -15,7 +15,7 @@
 		<p>
 		  go to: <a href="#reports:rid=1">sample report</a>
 		</p>
-		<e:Button styleName="{style.important}" ui:field="button">Example Button</e:Button>
+		<e:Button styleName="{style.important}" ui:field="button">Create New Expense Report</e:Button>
 		<c:CellTable ui:field="reports" pageSize="15"/>
 	</g:HTMLPanel>
 </ui:UiBinder>

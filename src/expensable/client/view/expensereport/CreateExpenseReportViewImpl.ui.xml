@@ -7,15 +7,42 @@
 		.important {
 			font-weight: bold;
 		}
+		.form th {
+    	vertical-align:top;
+    	text-align:right;
+    	p
+    	font-size:100%;
+    }
+    .form td {
+    	font-size:100%;
+    	padding-bottom:0.5em;
+    }
 	</ui:style>
 	<g:HTMLPanel>
 	  <h1>Create Expense Report</h1>
-		<table cellspacing="0" cellpadding="0" border="0">
+	  <hr />
+		<table cellspacing="4" cellpadding="0" border="0" class="{style.form}">
 		<tr>
 			<th>Expense Report Name:</th>
 			<td><input type="text" size="40" /></td>
 		</tr>
+		<tr>
+			<th>Expense Report Reason:</th>
+			<td><input type="text" size="40" /></td>
+		</tr>
+		<tr>
+			<th>Bill To:</th>
+			<td><input type="text" size="40" /></td>
+		</tr>
+		<tr>
+			<th>Authorization Number:</th>
+			<td><input type="text" size="40" /></td>
+		</tr>
+		<tr>
+			<th>Reimbursement Method:</th>
+			<td>Direct Deposit</td>
+		</tr>
 		</table>
-		<e:Button ui:field="createItem">Add Expense Item</e:Button>
+		<e:Button ui:field="createItem">Create Expense Report</e:Button>
 	</g:HTMLPanel>
 </ui:UiBinder> 
