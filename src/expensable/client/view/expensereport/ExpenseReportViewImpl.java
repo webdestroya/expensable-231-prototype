@@ -7,7 +7,6 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Widget;
 
-import expensable.client.view.helloworld.HelloWorld;
 
 public class ExpenseReportViewImpl extends Composite implements ExpenseReportView {
 
@@ -20,9 +19,6 @@ public class ExpenseReportViewImpl extends Composite implements ExpenseReportVie
   
   public ExpenseReportViewImpl() {
     initWidget(binder.createAndBindUi(this));
-    HelloWorld helloWorld = new HelloWorld();
-    helloWorld.setName("Ashwani");
-    panel.add(helloWorld);
   }
 
   @Override
