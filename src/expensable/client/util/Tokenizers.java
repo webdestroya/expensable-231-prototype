@@ -15,7 +15,7 @@ public class Tokenizers {
   public static HashMap<String, String> tokenizeQueryString(String qs) {
     HashMap<String, String> map = Maps.newHashMap();
     if (qs.startsWith("?")) {
-      qs.substring(1);
+      qs = qs.substring(1);
     }
 
     String[] params = qs.split("&");
