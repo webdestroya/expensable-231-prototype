@@ -1,0 +1,83 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:e="urn:import:expensable.client.view.widget"
+  xmlns:g="urn:import:com.google.gwt.user.client.ui">
+  <ui:style>
+    /* Add CSS here. See the GWT docs on UI Binder for more details */
+    .important {
+      font-weight: bold;
+    }
+    .form th {
+    	vertical-align:top;
+    	text-align:right;
+    	font-size:125%;
+    }
+    .form td {
+    	font-size:125%;
+    	padding-bottom:0.5em;
+    }
+  </ui:style>
+  <g:HTMLPanel>
+    <h1>Add New Expense Item</h1>
+    Add a new <g:ListBox ui:field="expenseType">
+      <g:item ui:field="airfairOption">Airfare</g:item>
+      <g:item ui:field="hotelOption">Hotel</g:item>
+    </g:ListBox> item.
+
+    <hr/>
+    
+    <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+    <td valign="top">
+    	
+    	<table cellspacing="3" cellpadding="0" border="0" class="{style.form}">
+    	<tr>
+    		<th>Amount:</th>
+    		<td><input type="text" size="5" value="0.00" />
+    		<select><option>USD</option></select></td>
+    	</tr>
+    	<tr>
+    		<th>Date:</th>
+    		<td><input type="text" size="10" value="mm/dd/yy" /></td>
+    	</tr>
+    	<tr>
+    		<th>Location:</th>
+    		<td><input type="text" size="25" value="" /></td>
+    	</tr>
+    	<tr>
+    		<th>Merchant:</th>
+    		<td><input type="text" size="25" value="" /></td>
+    	</tr>
+    	<tr>
+    		<th>Description:</th>
+    		<td><textarea cols="25" rows="3"></textarea></td>
+    	</tr>
+    	<tr>
+    		<th>&nbsp;</th>
+    		<td><input type="checkbox" /> Billable
+			<br /><input type="checkbox" /> Missing Receipt
+			<br/><input type="checkbox" /> Reclaimable Tax</td>
+    	</tr>
+    	<tr>
+    		<th>Reimbursable</th>
+    		<td>
+    			<label><input type="radio" name="reim" value="1" /> Yes</label>
+    			<label><input type="radio" name="reim" value="0" /> No</label>
+    			<label><input type="radio" name="reim" value="2" /> Personal</label>
+    		</td>
+    	</tr>
+    	</table>
+    	
+    </td>
+    <td valign="top"><g:SimplePanel ui:field="panel" /></td>
+    </tr>
+    <tr>
+    <td colspan="2" align="right">
+    	<e:Button ui:field="createItem">Add &amp; Finish</e:Button>
+		<e:Button ui:field="createItem2">Add &amp; Continue</e:Button>
+    </td>
+    </tr>
+    </table>
+		  
+  </g:HTMLPanel>
+</ui:UiBinder> 

@@ -13,6 +13,7 @@
 	<g:HTMLPanel>
 		<h1>Expense Reports</h1>
 		<g:TabBar ui:field="reportType"/>
+		<e:Button ui:field="button">Create New Expense Report</e:Button>
 		<c:CellTable ui:field="reports" pageSize="15"/>
 		<c:SimplePager ui:field="pager"/>
 		<e:Button styleName="{style.quickApprove}" ui:field="quickApproveButton">Quick Approve</e:Button>

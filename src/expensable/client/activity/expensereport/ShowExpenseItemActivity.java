@@ -24,17 +24,18 @@ public class ShowExpenseItemActivity extends AbstractActivity
   @Override
   public void start(AcceptsOneWidget container, EventBus eventBus) {
     CreateExpenseItemView view;
-    switch (place.getItemType()) {
-      // TODO(dpurpura): map other view types
-      case AIRFAIRE:
-        view = clientFactory.getCreateExpenseItemViewFactory().getCreateAirfaireExpenseItemView();
-        break;
-      case NULL_TYPE: // fall through to default
-      default:
-        view = clientFactory.getCreateExpenseItemViewFactory().getCreateAirfaireExpenseItemView();
-    }
-    view.setPresenter(this);
-    container.setWidget(view.asWidget());
+//    switch (place.getItemType()) {
+//      // TODO(dpurpura): map other view types
+//      case AIRFAIRE:
+//        view = clientFactory.getCreateExpenseItemViewFactory().getCreateAirfaireExpenseItemView();
+//        break;
+//      case NULL_TYPE: // fall through to default
+//      default:
+//        view = clientFactory.getCreateExpenseItemViewFactory().getCreateAirfaireExpenseItemView();
+//    }
+//    view.setPresenter(this);
+//    container.setWidget(view.asWidget());
+    throw new UnsupportedOperationException("implement me!");
   }
 
   @Override

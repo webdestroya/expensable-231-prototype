@@ -6,21 +6,22 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
 import expensable.client.ClientFactory;
-import expensable.client.place.CreateExpenseReportPlace;
-import expensable.client.view.expensereport.CreateExpenseReportView;
-import expensable.client.view.expensereport.CreateExpenseReportView.CreateExpenseReportPresenter;
+import expensable.client.place.CreateExpenseItemPlace;
+import expensable.client.view.expensereport.item.CreateExpenseItemView;
+import expensable.client.view.expensereport.item.CreateExpenseItemView.CreateExpenseItemPresenter;
 
-public class CreateExpenseReportActivity extends AbstractActivity implements CreateExpenseReportPresenter {
+public class CreateExpenseItemActivity extends AbstractActivity
+    implements CreateExpenseItemPresenter {
 
   private ClientFactory clientFactory;
 
-  public CreateExpenseReportActivity(CreateExpenseReportPlace place, ClientFactory clientFactory) {
+  public CreateExpenseItemActivity(CreateExpenseItemPlace place, ClientFactory clientFactory) {
     this.clientFactory = clientFactory;
   }
 
   @Override
   public void start(AcceptsOneWidget container, EventBus eventBus) {
-	CreateExpenseReportView view = clientFactory.getCreateExpenseReportView();
+    CreateExpenseItemView view = clientFactory.getCreateExpenseItemView();
     view.setPresenter(this);
     container.setWidget(view.asWidget());
   }
