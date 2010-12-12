@@ -1,6 +1,5 @@
 package expensable.client.activity.expensereport;
 
-import java.util.Date;
 import java.util.List;
 
 import com.google.gwt.activity.shared.AbstractActivity;
@@ -16,8 +15,6 @@ import expensable.client.place.ExpenseReportsPlace;
 import expensable.client.view.expensereport.ExpenseReportView;
 import expensable.client.view.expensereport.ExpenseReportView.ExpenseReportPresenter;
 import expensable.shared.models.ExpenseItem;
-import expensable.shared.models.ExpenseReport;
-import expensable.shared.models.ExpenseType;
 
 public class ShowExpenseReportActivity extends AbstractActivity implements ExpenseReportPresenter {
 
@@ -34,15 +31,15 @@ public class ShowExpenseReportActivity extends AbstractActivity implements Expen
     }
 
   };
-  
-  
-  
+
+
+
 
   /**
    * The provider that holds the list of reports in the database.
    */
   private final ListDataProvider<ExpenseItem> dataProvider;
-  
+
 
   public ShowExpenseReportActivity(ExpenseReportsPlace place, ClientFactory clientFactory) {
     this.dataProvider = new ListDataProvider<ExpenseItem>();
@@ -83,6 +80,6 @@ public class ShowExpenseReportActivity extends AbstractActivity implements Expen
     reports.add(new ExpenseItem(123123123,1231,"Alaska","Chevron","Gas"));
     reports.add(new ExpenseItem(237987,9861,"Alaska","Dennys","Breakfast"));
   }
-  
-  
+
+
 }
