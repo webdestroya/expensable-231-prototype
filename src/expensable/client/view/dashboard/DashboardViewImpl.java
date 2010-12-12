@@ -40,6 +40,11 @@ public class DashboardViewImpl extends ResizeComposite implements DashboardView 
 
   public DashboardViewImpl() {
     initWidget(binder.createAndBindUi(this));
+  }
+
+  @Override
+  public void setPresenter(DashboardPresenter presenter) {
+    this.presenter = presenter;
 
     Runnable onLoadCallback = new Runnable() {
       @Override
@@ -50,11 +55,6 @@ public class DashboardViewImpl extends ResizeComposite implements DashboardView 
       }
     };
     VisualizationUtils.loadVisualizationApi(onLoadCallback, PieChart.PACKAGE);
-  }
-
-  @Override
-  public void setPresenter(DashboardPresenter presenter) {
-    this.presenter = presenter;
     newsfeed.clear();
     newsfeed.add(presenter.getNewsItems());
   }
