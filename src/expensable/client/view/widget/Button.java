@@ -19,69 +19,65 @@ public class Button extends Composite implements Focusable, HasClickHandlers, Ha
   interface Binder extends UiBinder<Widget, Button> {
   }
 
-  @UiField com.google.gwt.user.client.ui.Button container;
+  @UiField com.google.gwt.user.client.ui.Button button;
 
   public Button() {
     initWidget(uiBinder.createAndBindUi(this));
-    container.setText("button");
   }
 
   public Button(String text) {
     this();
-    container.setText(text);
+    button.setText(text);
   }
 
   @Override
   public int getTabIndex() {
-    // TODO Auto-generated method stub
-    return 0;
+    return button.getTabIndex();
   }
 
   @Override
   public void setAccessKey(char key) {
-    // TODO Auto-generated method stub
-
+    button.setAccessKey(key);
   }
 
   @Override
   public void setFocus(boolean focused) {
-    // TODO Auto-generated method stub
+    button.setFocus(focused);
   }
 
   @Override
   public void setTabIndex(int index) {
-    // TODO Auto-generated method stub
+    button.setTabIndex(index);
   }
 
   @Override
   public void fireEvent(GwtEvent<?> event) {
-    container.fireEvent(event);
-
+    button.fireEvent(event);
   }
 
   @Override
   public HandlerRegistration addClickHandler(ClickHandler handler) {
-    return container.addClickHandler(handler);
+    return button.addClickHandler(handler);
   }
 
   @Override
   public String getText() {
-    return container.getText();
+    return button.getText();
   }
 
   @Override
   public void setText(String text) {
-    container.setText(text);
+    button.setText(text);
   }
 
   @Override
   public String getHTML() {
-    return container.getHTML();
+    return button.getHTML();
   }
 
   @Override
   public void setHTML(String html) {
-    container.setHTML(html);
+    button.setHTML(html);
   }
 
 }

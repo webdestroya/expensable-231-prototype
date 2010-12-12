@@ -10,6 +10,6 @@
 		}
 	</ui:style>
 	<g:HTMLPanel addStyleNames="{style.panel}">
-		<g:Button ui:field="container" addStyleNames="{style.container}"/>
+	 	<g:Button ui:field="button" addStyleNames="button gray"/>
 	</g:HTMLPanel>
 </ui:UiBinder> 
