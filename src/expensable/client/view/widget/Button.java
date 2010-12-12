@@ -7,6 +7,7 @@ import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Focusable;
 import com.google.gwt.user.client.ui.HasHTML;
@@ -19,7 +20,7 @@ public class Button extends Composite implements Focusable, HasClickHandlers, Ha
   interface Binder extends UiBinder<Widget, Button> {
   }
 
-  @UiField com.google.gwt.user.client.ui.Button button;
+  @UiField Anchor button;
 
   public Button() {
     initWidget(uiBinder.createAndBindUi(this));
