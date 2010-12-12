@@ -21,8 +21,6 @@ public class ExpenseItemViewImpl extends Composite implements ExpenseItemView {
   private int currentPanel;
   private ArrayList<CreateItemPanel> itemMap;
 
-  @UiField ListBox expenseType;
-  @UiField SimplePanel panel;
 
   private ExpenseItemPresenter presenter;
 
@@ -35,16 +33,6 @@ public class ExpenseItemViewImpl extends Composite implements ExpenseItemView {
   @Override
   public void setPresenter(ExpenseItemPresenter presenter) {
     this.presenter = presenter;
-  }
-
-  @UiHandler("expenseType")
-  public void onExpenseTypeChange(ChangeEvent e) {
-    int selectedIndex = expenseType.getSelectedIndex();
-    if (currentPanel != selectedIndex) {
-      panel.clear();
-      panel.add(itemMap.get(selectedIndex).asWidget());
-      currentPanel = selectedIndex;
-    }
   }
 
 }
