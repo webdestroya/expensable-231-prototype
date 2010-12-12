@@ -6,7 +6,13 @@ public class ExpenseItem implements NewsItem {
 
   /** The cost of the item in cents */
   private int amount;
-  private Date purchaseDate;
+
+  private int id;
+
+
+private Date purchaseDate;
+  private Date lastModified;
+  
   private String location;
   private String merchant;
   private String description;
@@ -15,10 +21,17 @@ public class ExpenseItem implements NewsItem {
 
   }
 
+  public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+  
   /**
    * @return the amount
    */
-  @Override
   public int getAmount() {
     return amount;
   }
