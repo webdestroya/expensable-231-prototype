@@ -11,5 +11,6 @@
 	  <h1>ExpenseReport</h1>
 		<p>This is the ExpenseReport page</p>
 		<p>go to a <a href="#reports:rid=1&amp;iid=1">sample expense item</a></p>
+		<g:FlowPanel ui:field="panel"/>
 	</g:HTMLPanel>
 </ui:UiBinder> 

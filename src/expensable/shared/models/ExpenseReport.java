@@ -15,6 +15,7 @@ public class ExpenseReport implements NewsItem {
   private Integer amount;
   private ExpenseType type;
   private Date createdDate;
+  private String attachment;
 
   public ExpenseReport() {
     expenseItems = new ArrayList<ExpenseItem>();
@@ -102,6 +103,22 @@ public class ExpenseReport implements NewsItem {
    */
   public List<ExpenseItem> getExpenseItems() {
     return expenseItems;
+  }
+
+  /**
+   *
+   * @param the attachment
+   */
+  public void setAttachment(String attachment){
+	  this.attachment = attachment;
+  }
+
+  /**
+   *
+   * @return the attachment
+   */
+  public String getAttachment(){
+	  return attachment;
   }
 
   /**
