@@ -8,16 +8,20 @@
 		.important {
 			font-weight: bold;
 		}
-		.center {
+		.timelinePanel {
+		  margin: auto;
+    	width: 720px;
+		}
+		.newsfeed {
 			margin: auto;
-			width: 300px;
+			width: 400px;
 		}
 	</ui:style>
 	<g:ScrollPanel>
 		<g:HTMLPanel>
 		  <h1>Dashboard</h1>
-			<p>This is the Dashboard</p>
-	    <d:NewsFeedView ui:field="newsfeed" addStyleNames="{style.center}"/>
+			<g:SimplePanel ui:field="timelinePanel" addStyleNames="{style.timelinePanel}"/>
+	    <d:NewsFeedView ui:field="newsfeed" addStyleNames="{style.newsfeed}"/>
 		</g:HTMLPanel>
 	</g:ScrollPanel>
 </ui:UiBinder> 

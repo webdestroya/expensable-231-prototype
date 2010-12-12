@@ -1,0 +1,83 @@
+<mockup version="1.0" skin="sketch" measuredW="1060" measuredH="646" mockupW="968" mockupH="623">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="82" y="13" w="968" h="623" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Items%20for%20%22Travel%20to%20Alaska%22%0Ahttp%3A//expensable.com/spotaudit/</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="140" y="154" w="882" h="446" measuredW="200" measuredH="194" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>2</selectedIndex>
+        <text>Dashboard%0AExpenses%0ASpot%20Audit%0ABatches</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="106" y="94" w="233" h="45" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>logo</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Label" x="695" y="94" w="-1" h="-1" measuredW="353" measuredH="25" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>user@example.com%20%7C%20%5BSettings%5D%20%7C%20%5BWhat%27s%20New%5D%20%7C%20%5BSign%20out%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Label" x="256" y="182" w="-1" h="-1" measuredW="116" measuredH="25" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Select%20Search%20By</text>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::ComboBox" x="387" y="181" w="117" h="-1" measuredW="88" measuredH="25" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Employee</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Label" x="256" y="213" w="-1" h="-1" measuredW="92" measuredH="25" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Select%20Status</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::ComboBox" x="387" y="214" w="153" h="-1" measuredW="50" measuredH="25" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>All</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::Button" x="834" y="244" w="99" h="28" measuredW="91" measuredH="28" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>40463</color>
+        <text>Search%20All</text>
+      </controlProperties>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::Label" x="256" y="244" w="-1" h="-1" measuredW="107" measuredH="25" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Select%20Employee</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::ComboBox" x="387" y="245" w="208" h="-1" measuredW="32" measuredH="24" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::Label" x="256" y="274" w="-1" h="-1" measuredW="35" measuredH="25" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Year</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::ComboBox" x="387" y="275" w="85" h="-1" measuredW="64" measuredH="25" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>2010</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Link" x="844" y="282" w="-1" h="-1" measuredW="55" measuredH="25" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Batched</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Label" x="279" y="338" w="-1" h="-1" measuredW="647" measuredH="25" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Status%20%20%20%20%20Amount%20%20%20%20%20%20Submitted%20%20%20%20%20Batch%20ID%20%20%20%20%20Tracking%20Number%20%20%20%20%20%20%20Employee%20%20%20%20%20%20%20%20Department</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="936" y="366" w="-1" h="169" measuredW="16" measuredH="100" zOrder="15" locked="false" isInGroup="-1"/>
+  </controls>
+</mockup>

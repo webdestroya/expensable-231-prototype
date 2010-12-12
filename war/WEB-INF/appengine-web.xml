@@ -12,6 +12,8 @@
 
     <include path="**.cache.*" expiration="365d" />
     <exclude path="**.gwt.rpc" />
+
+    <include path="/images/favicon.ico" />
   </static-files>
 
   <!-- Configure java.util.logging -->

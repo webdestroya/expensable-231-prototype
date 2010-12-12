@@ -9,6 +9,13 @@
 	</ui:style>
 	<g:HTMLPanel>
 	  <h1>ExpenseItem</h1>
-		<p>This is the ExpenseItem page</p>
+		<g:ListBox ui:field="expenseType">
+      <g:item ui:field="airfairOption">Airfaire</g:item>
+      <g:item ui:field="hotelOption">Hotel</g:item>
+		</g:ListBox>
+
+		<hr/>
+		<g:SimplePanel ui:field="panel" />
+
 	</g:HTMLPanel>
 </ui:UiBinder> 
