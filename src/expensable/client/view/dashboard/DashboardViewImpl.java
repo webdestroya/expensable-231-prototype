@@ -50,7 +50,7 @@ public class DashboardViewImpl extends ResizeComposite implements DashboardView 
       @Override
       public void run() {
         AnnotatedTimeLine timeline
-            = new AnnotatedTimeLine(createTable(), createOptions(), "720px", "300px");
+            = new AnnotatedTimeLine(createTable(), createOptions(), "425px", "200px");
         timelinePanel.add(timeline);
       }
     };

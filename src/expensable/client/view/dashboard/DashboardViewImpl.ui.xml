@@ -10,7 +10,7 @@
 		}
 		.timelinePanel {
 		  margin: auto;
-    	width: 720px;
+    	width: 400px;
 		}
 		.newsfeed {
 			margin: auto;
