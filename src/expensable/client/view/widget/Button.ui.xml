@@ -8,6 +8,6 @@
 	  }
 	</ui:style>
 	<g:HTMLPanel addStyleNames="{style.panel}">
-	 	<g:Anchor ui:field="button" addStyleNames="button gray"/>
+	 	<g:Anchor ui:field="button" addStyleNames="button"/>
 	</g:HTMLPanel>
 </ui:UiBinder> 
