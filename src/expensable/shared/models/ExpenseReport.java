@@ -15,11 +15,9 @@ public class ExpenseReport implements NewsItem {
   private Integer amount;
   private ExpenseType type;
   private Date createdDate;
-  private Date lastModified;
 
   public ExpenseReport() {
     expenseItems = new ArrayList<ExpenseItem>();
-    lastModified = new Date();
   }
 
   /**
@@ -54,7 +52,8 @@ public class ExpenseReport implements NewsItem {
   /**
    * @return the amount
    */
-  public Integer getAmount() {
+  @Override
+  public int getAmount() {
     return amount;
   }
 
@@ -95,7 +94,7 @@ public class ExpenseReport implements NewsItem {
 
   @Override
   public Date getLastModified() {
-    return lastModified;
+    return getCreatedDate();
   }
 
   /**

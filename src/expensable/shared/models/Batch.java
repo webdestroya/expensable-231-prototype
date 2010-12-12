@@ -2,17 +2,20 @@ package expensable.shared.models;
 
 import java.util.Date;
 
+import com.google.gwt.user.client.Random;
+
 public class Batch implements NewsItem {
 
   /** The cost of the item in cents */
   private int id;
   private Date date;
+  private int amount;
   private Date lastModified;
   private String name;
   private String status;
 
   public Batch() {
-
+    this(0, "", "");
   }
 
   public Batch(int id, String name, String status) {
@@ -21,6 +24,7 @@ public class Batch implements NewsItem {
     this.status = status;
     this.date = new Date();
     this.lastModified = new Date();
+    this.amount = Random.nextInt(5000);
   }
 
   public Date getDate() {
@@ -29,6 +33,11 @@ public class Batch implements NewsItem {
 
   public void setDate(Date date) {
     this.date = date;
+  }
+
+  @Override
+  public int getAmount() {
+    return amount;
   }
 
   @Override

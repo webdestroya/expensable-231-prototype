@@ -10,7 +10,8 @@ import expensable.client.place.CreateExpenseReportPlace;
 import expensable.client.view.expensereport.CreateExpenseReportView;
 import expensable.client.view.expensereport.CreateExpenseReportView.CreateExpenseReportPresenter;
 
-public class CreateExpenseReportActivity extends AbstractActivity implements CreateExpenseReportPresenter {
+public class CreateExpenseReportActivity extends AbstractActivity
+    implements CreateExpenseReportPresenter {
 
   private ClientFactory clientFactory;
 
@@ -20,7 +21,7 @@ public class CreateExpenseReportActivity extends AbstractActivity implements Cre
 
   @Override
   public void start(AcceptsOneWidget container, EventBus eventBus) {
-	CreateExpenseReportView view = clientFactory.getCreateExpenseReportView();
+    CreateExpenseReportView view = clientFactory.getCreateExpenseReportView();
     view.setPresenter(this);
     container.setWidget(view.asWidget());
   }

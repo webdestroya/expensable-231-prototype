@@ -18,6 +18,9 @@
   <inherits name='com.google.common.primitives.Primitives'/>
   <inherits name='java.util.Util'/>
 
+  <!--  Add the Google Visualization Library -->
+  <inherits name='com.google.gwt.visualization.Visualization'/>
+
   <!-- Specify the app entry point class.                         -->
   <entry-point class='expensable.client.ExpensableEntryPoint'/>
 

@@ -105,7 +105,9 @@
       </g:HTMLPanel>
 	  </g:west>
 	  <g:center>
-      <g:SimplePanel addStyleNames="{style.content}" ui:field="content"/>
+	    <g:ScrollPanel>
+        <g:SimplePanel addStyleNames="{style.content}" ui:field="content"/>
+      </g:ScrollPanel>
 	  </g:center>
 	</g:DockLayoutPanel>
 </ui:UiBinder> 

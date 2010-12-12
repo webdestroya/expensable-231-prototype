@@ -24,7 +24,6 @@ import com.google.gwt.view.client.SelectionModel;
 
 import expensable.client.activity.expensereport.ShowExpenseReportsActivity;
 import expensable.client.place.CreateExpenseReportPlace;
-import expensable.client.place.ExpenseReportsPlace;
 import expensable.client.view.widget.Button;
 import expensable.shared.models.ExpenseReport;
 
