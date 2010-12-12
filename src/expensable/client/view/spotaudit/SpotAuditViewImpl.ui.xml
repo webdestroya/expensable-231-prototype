@@ -2,7 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui"
 	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
-  	xmlns:e="urn:import:expensable.client.view.widget">
+  	xmlns:e="urn:import:expensable.client.view.widget" xmlns:collect="urn:import:com.google.appengine.repackaged.com.google.common.collect">
 	<ui:style>
 		.displayButton {
 			margin: .5em;
@@ -18,9 +18,20 @@
 	</ui:style>
 	<g:HTMLPanel>
 	  <h1>Spot Audit</h1>
-	  <p> Select Status <g:ListBox styleName="{style.listBox}" ui:field="statusType"/></p>
-	  <p> Select Employee <g:ListBox styleName="{style.listBox}" ui:field="employeeName"/></p>
-	  <p> Year <g:ListBox styleName="{style.listBox}" ui:field="year"/></p>
+	<Table>
+	<tr>
+	  <td align='right'> Select Status </td>
+	  <td> <g:ListBox styleName="{style.listBox}" ui:field="statusType"/></td>
+	</tr>  
+	<tr>
+	  <td align='right'> Select Employee </td>
+	  <td> <g:ListBox styleName="{style.listBox}" ui:field="employeeName"/></td>
+	</tr> 
+	<tr> 
+	  <td align='right'> Year </td>
+	  <td> <g:ListBox styleName="{style.listBox}" ui:field="year"/></td>
+	</tr>
+	</Table>  
 	  <e:Button styleName="{style.displayButton}" ui:field="display">Display</e:Button>
  	  <c:CellTable ui:field="reports" pageSize="15"/>
 	  <c:SimplePager styleName="{style.simplePager}" ui:field="pager"/>

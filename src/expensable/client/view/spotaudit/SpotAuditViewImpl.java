@@ -64,6 +64,7 @@ public class SpotAuditViewImpl extends Composite implements SpotAuditView {
 
 		//Initializing the select department list box
 		employeeName.addItem("Select One");
+		employeeName.addItem("Griffin, Brian");
 		employeeName.addItem("Jean, Al");
 		employeeName.addItem("Law, Dennis");
 		employeeName.addItem("Rodney, Mike");

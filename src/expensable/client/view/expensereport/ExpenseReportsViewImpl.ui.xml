@@ -8,13 +8,17 @@
 			float: right; 
 			
 		}
+		.pager {
+			margin: 0 auto; 
+			
+		}
 	</ui:style>
 	<g:HTMLPanel>
 		<h1>Expense Reports</h1>
 		<g:TabBar ui:field="reportType"/>
 		<div style="border:1px solid black;width:800px;">
 		<c:CellTable ui:field="reports" pageSize="15"/>
-		<c:SimplePager ui:field="pager"/>
+		<c:SimplePager styleName="{style.pager}" ui:field="pager"/>
 		
 		
 		</div>
