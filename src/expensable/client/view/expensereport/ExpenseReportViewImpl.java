@@ -6,18 +6,13 @@ import com.google.gwt.cell.client.CheckboxCell;
 import com.google.gwt.cell.client.DateCell;
 import com.google.gwt.cell.client.FieldUpdater;
 import com.google.gwt.cell.client.NumberCell;
-import com.google.gwt.cell.client.SafeHtmlCell;
 import com.google.gwt.cell.client.TextCell;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.safehtml.shared.OnlyToBeUsedInGeneratedCodeStringBlessedAsSafeHtml;
-import com.google.gwt.safehtml.shared.SafeHtml;
 import com.google.gwt.safehtml.shared.SafeHtmlUtils;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
-import com.google.gwt.user.cellview.client.SimplePager;
-import com.google.gwt.user.cellview.client.SimplePager.TextLocation;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.MultiSelectionModel;
@@ -32,19 +27,19 @@ public class ExpenseReportViewImpl extends Composite implements ExpenseReportVie
 
   interface Binder extends UiBinder<Widget, ExpenseReportViewImpl> {
   }
- 
+
   @UiField(provided = true) CellTable<ExpenseItem> reports;
-  
+
 
   private ExpenseReportPresenter presenter;
 
   public ExpenseReportViewImpl() {
     reports = new CellTable<ExpenseItem>(ShowExpenseReportActivity.KEY_PROVIDER);
 
-    
+
     initWidget(uiBinder.createAndBindUi(this));
 
-    
+
   }
 
   @Override
@@ -121,9 +116,9 @@ public class ExpenseReportViewImpl extends Composite implements ExpenseReportVie
         return report.getName();
       }
     };
-    reports.addColumn(nameColumn, "Type");    
-    
-    
+    reports.addColumn(nameColumn, "Type");
+
+
     // Attachment
     Column<ExpenseItem, String> attachmentColumn
         = new Column<ExpenseItem, String>(new TextCell()) {
@@ -133,7 +128,7 @@ public class ExpenseReportViewImpl extends Composite implements ExpenseReportVie
       }
     };
     reports.addColumn(attachmentColumn, "Location");
-    
+
     numCols = 6;
   }
 
